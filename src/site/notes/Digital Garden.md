@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/Digital Garden/","noteIcon":"","created":"2024-04-16T13:01:27.440+08:00","updated":"2024-04-16T18:51:17.453+08:00"}
+{"dg-publish":true,"permalink":"/Digital Garden/","noteIcon":"","created":"2024-04-16T13:01:27.440+08:00","updated":"2024-04-16T19:09:55.692+08:00"}
 ---
 
-[Digital Garden](https://dg-docs.ole.dev/)
+[Digital Garden](https://dg-docs.ole.dev/) 官方文档
 
 先在 Obsidian 中新建一个笔记，并将下面的代码添加到文件顶部。
 
