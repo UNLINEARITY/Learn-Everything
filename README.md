@@ -18,12 +18,14 @@ This is a project based on Obsidian + Digital Garden + Vercel
 - [x] 计算机
   - [x] 编程语言
     - [x] Matlab
-    - [x] 机器学习
+  - [x] 机器学习
 
 ### 核心的思想
 该项目旨在构建以**双向链接**和**关系图谱**为核心的知识库
 
-主体文件为Markdown（.md),数学公式使用Latex语法，呈现笔记关系使用简单的Wiki语法
+强调知识与知识之间的联系，注重数理基础，深入探讨数学与物理知识在各个领域的作用与影响
+
+主体文件为Markdown（.md),数学公式使用Latex语法渲染，笔记关系使用简单的Wiki语法呈现
 
 ### 参与到网站的建设中
 笔记的原Markdown文件在本库的src/site/notes目录下，如果在网站中发现问题或者提建议，可以随时查看，并提交修改建议
