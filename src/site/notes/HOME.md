@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-19T20:22:35.226+08:00"}
+{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-20T20:06:26.492+08:00"}
 ---
 
 ### 为什么会有这个网站？
@@ -29,6 +29,7 @@
 [[数学\|数学]]
 [[物理\|物理]]
 [[计算机\|计算机]]
+[[数学建模\|数学建模]]
 [[知识管理\|知识管理]]
 ### 可以考虑增添的章节
 
