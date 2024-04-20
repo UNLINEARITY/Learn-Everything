@@ -18,6 +18,7 @@ This is a project based on Obsidian + Digital Garden + Vercel
 - [x] 计算机
   - [x] 编程语言
     - [x] Matlab
+    - [x] 机器学习
 
 ### 核心的思想
 该项目旨在构建以**双向链接**和**关系图谱**为核心的知识库
