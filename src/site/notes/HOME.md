@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-20T20:28:00.017+08:00"}
+{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-21T12:41:14.177+08:00"}
 ---
 
 ### 为什么会有这个网站？
@@ -20,7 +20,6 @@
 - ......
 你可以在[本网站的库](https://github.com/UNLINEARITY/Learn-for-Everything)中，成为贡献者之一 
 ~~(点个star 也好)~~
-
 ### 该网站的基本使用
 该网站的核心是：使用最朴素的markdown 文件渲染，使用LaTeX 打出最简洁的公式，搭配**双向链接**和**关系图**，呈现知识的形成过程、展示知识之间的联系
 
