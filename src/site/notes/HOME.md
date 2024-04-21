@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-21T12:41:14.177+08:00"}
+{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-21T17:16:13.337+08:00"}
 ---
 
 ### 为什么会有这个网站？
@@ -54,4 +54,6 @@
 ### 关于该网站的构建者和贡献者
 [[Unlinearity\|Unlinearity]]
 
+### 日志
+[[日志\|日志]]
 
