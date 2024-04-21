@@ -21,6 +21,12 @@ This is a project based on Obsidian + Digital Garden + Vercel
     - [x] Matlab
   - [x] 机器学习
 
+可能添加的内容？
+- [x] 哲学
+- [ ] 生物
+  - [ ] 生态学
+- [ ] 法学
+- [ ] 医学
 ### 核心的思想
 该项目旨在构建以**双向链接**和**关系图谱**为核心的知识库
 
