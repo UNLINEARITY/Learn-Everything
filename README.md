@@ -55,7 +55,7 @@ This is a project based on Obsidian + Digital Garden + Vercel
 ### 2.贡献新的知识分支
 可以在本网站的**Contributions**中添加属于自己的文件夹，增加独属于自己的分支！
 
-具体贡献步骤可以查看该文件夹中的readme文件
+具体贡献步骤可以查看该文件夹中的[readme文件](https://github.com/UNLINEARITY/Learn-for-Everything/tree/main/Contributions)
 
 **相信我，非常简单！**  ~~但是要做好工作可能有点难度，要保证网站的整体质量~~
 
