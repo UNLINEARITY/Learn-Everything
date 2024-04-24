@@ -2,7 +2,8 @@ This is a project based on Obsidian + Digital Garden + Vercel
 
 这个项目是以Obsidian的Digital Garden插件为核心，利用Vercel部署的网站
 
-你可以访问这个[网站](https://learn-for-everything.vercel.app/),看看所搭建成果(~~需要科学上网，不过我相信上GitHub的人应该都能流畅访问吧~~)
+~~你可以访问这个[网站](https://learn-for-everything.vercel.app/),看看所搭建成果(~~需要科学上网，不过我相信上GitHub的人应该都能流畅访问吧~~)~~
+你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果!
 
 ## 一、核心的思想
 >***你是否经常听到：微积分积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
