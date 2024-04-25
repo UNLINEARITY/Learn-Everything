@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-25T10:08:33.191+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-25T10:08:33.191+08:00"}
 ---
 
 ### 序言

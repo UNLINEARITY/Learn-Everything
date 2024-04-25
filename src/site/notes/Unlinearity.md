@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"网站的贡献者/Unlinearity.md","permalink":"/网站的贡献者/Unlinearity/","pinned":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2024-04-21T18:44:56.925+08:00"}
+{"dg-publish":true,"dg-pinned":true,"dg-path":"网站的贡献者/Unlinearity.md","permalink":"/网站的贡献者/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2024-04-21T18:44:56.925+08:00"}
 ---
 
 >“你灵魂的欲望，是你命运的先知”

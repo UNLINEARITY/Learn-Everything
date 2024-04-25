@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-04-16T19:33:03.830+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-04-16T19:33:03.830+08:00"}
 ---
 
 LTI system
