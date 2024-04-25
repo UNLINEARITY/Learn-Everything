@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-24T20:43:15.185+08:00"}
+{"dg-publish":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-04-25T10:08:33.191+08:00"}
 ---
 
 ### 序言
@@ -23,6 +23,7 @@
 [[计算机\|计算机]]
 [[数学建模\|数学建模]]
 [[知识管理\|知识管理]]
+[[经济\|经济]]
 
 ### 关于该网站的更多信息
 [[网站的构建历程\|网站的构建历程]]
