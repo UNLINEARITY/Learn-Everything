@@ -1,75 +1,20 @@
 ---
-{"dg-publish":true,"dg-path":"工具/mermaid.md","permalink":"/工具/mermaid/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-22T22:03:17.417+08:00","updated":"2024-04-26T21:10:32.594+08:00"}
+{"dg-publish":true,"dg-path":"工具/mermaid.md","permalink":"/工具/mermaid/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-22T22:03:17.417+08:00","updated":"2024-04-26T22:39:33.105+08:00"}
 ---
 
 [官网](https://mermaid.js.org/)
 
 
-
-```mermaid  
-graph LR
-	test--> id[结束] & 开始
-	结束-->世界
-```
-
-```mermaid  
-flowchart TD
-	Start --> Stop
-```
-
-
-```mermaid  
-timeline
-	title History of Social Media Platform
-	  2002 : LinkedIn
-	  2004 : Facebook : Google
-	  2005 : Youtube
-	  2006 : Twitter
-	  2007 : Tumblr
-	  2008 : Instagram
-	  2010 : Pinterest
-```
-
-```mermaid  
- pie showdata
-        title /r/obsidianmd posts by type
-        "Graphs" : 85
-        "Dashboards" : 14
-        "Tips" : 1
-```
-
-
 ```mermaid
 graph LR
-	项目现金流量--> 初始现金流量 & 营业净现金流量 & 终结现金流量
-	初始现金流量-->id2[现金流出]-->固定资产投资 & 流动资金投资 & 其他投资
-	营业净现金流量--> 现金流入 & 现金流出
-	现金流入-->营业收入
-	现金流出-->经营成本 & 税金及附加 & 所得税
-	终结现金流量-->id1[现金流入]-->固定资产预计净残值 & 流动资金投资回收
-	
-```
-
-```mermaid
-graph LR
-项目现金流量--> 初始现金流量 & 营业净现金流量 & 终结现金流量
-初始现金流量-->id2[现金流出]-->固定资产投资 & 流动资金投资 & 其他投资
-营业净现金流量--> 现金流入 & 现金流出
-现金流入-->营业收入
-现金流出-->经营成本 & 税金及附加 & 所得税
-终结现金流量-->id1[现金流入]-->固定资产预计净残值 & 流动资金投资回收
-	
+基本语法-->1[流程图方向] & 2[节点形状] & 3[节点之间的连接]
+1--> TB从上到下 & BT从下到上 & RL从右到左 & LR从左到右
+2-->id1(圆角矩形) & id2([体育场形]) & id3[[子程序]] & id4[(圆柱形)] & id5((圆形)) & id6{菱形} & id7{{六边形}}
+3 --> 带箭头
+3 ---  直接连接
+3 --- text --- 带文本
+3 ---code-->代码
 ```
 
 
-```mermaid
-timeline
-	title History of Social Media Platform
-	  2002 : LinkedIn
-	  2004 : Facebook : Google
-	  2005 : Youtube
-	  2006 : Twitter
-	  2007 : Tumblr
-	  2008 : Instagram
-	  2010 : Pinterest
-```
+
