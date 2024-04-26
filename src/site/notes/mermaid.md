@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"工具/mermaid.md","permalink":"/工具/mermaid/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-22T22:03:17.417+08:00","updated":"2024-04-26T21:05:10.065+08:00"}
+{"dg-publish":true,"dg-path":"工具/mermaid.md","permalink":"/工具/mermaid/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-22T22:03:17.417+08:00","updated":"2024-04-26T21:07:29.006+08:00"}
 ---
 
 [官网](https://mermaid.js.org/)
@@ -63,8 +63,13 @@ graph LR
 
 
 ```mermaid
-graph LR
-项目现金流量--> 初始现金流量 & 营业净现金流量 & 终结现金流量
-初始现金流量-->id2[现金流出]-->固定资产投资 & 流动资金投资 & 其他投资
-
+timeline
+	title History of Social Media Platform
+	  2002 : LinkedIn
+	  2004 : Facebook : Google
+	  2005 : Youtube
+	  2006 : Twitter
+	  2007 : Tumblr
+	  2008 : Instagram
+	  2010 : Pinterest
 ```
