@@ -1,3 +1,5 @@
+# Learn for Everything!
+You may learn everything you want to lean in this repositor
 This is a project based on Obsidian + Digital Garden + Vercel
    
 这个项目是以Obsidian的Digital Garden插件为核心，利用Vercel部署的网站
