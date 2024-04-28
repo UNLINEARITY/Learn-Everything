@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"工具/mermaid.md","permalink":"/工具/mermaid/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-22T22:03:17.417+08:00","updated":"2024-04-27T17:04:29.972+08:00"}
+{"dg-publish":true,"dg-path":"工具/mermaid.md","permalink":"/工具/mermaid/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-22T22:03:17.417+08:00","updated":"2024-04-28T13:11:45.843+08:00"}
 ---
 
 [官网](https://mermaid.js.org/)
@@ -112,6 +112,7 @@ world,ome,40
 
 
 
+
 ```mermaid
 quadrantChart
     title Reach and engagement of campaigns
@@ -129,4 +130,26 @@ quadrantChart
     Campaign F: [0.35, 0.78]
 
 ```
+```mermaid
+stateDiagram-v2
+        [*] --> Active
+    
+        state Active {
+            [*] --> NumLockOff
+            NumLockOff --> NumLockOn : EvNumLockPressed
+            NumLockOn --> NumLockOff : EvNumLockPressed
+            --
+            [*] --> CapsLockOff
+            CapsLockOff --> CapsLockOn : EvCapsLockPressed
+            CapsLockOn --> CapsLockOff : EvCapsLockPressed
+            --
+            [*] --> ScrollLockOff
+            ScrollLockOff --> ScrollLockOn : EvScrollLockPressed
+            ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
+        }
+
+```
+
+
+
 
