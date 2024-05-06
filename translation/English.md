@@ -1,4 +1,4 @@
-# Learn for Everything!
+# Learn Everything!
 This is a project based on Obsidian + Digital Garden + Vercel
 
 This project is centered around the Obsidian Digital Garden plugin, utilizing Vercel for deployment.

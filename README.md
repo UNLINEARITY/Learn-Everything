@@ -1,4 +1,4 @@
-# Learn for Everything!
+# Learn Everything!
 This is a project based on Obsidian + Digital Garden + Vercel
 
 **[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**
