@@ -5,4 +5,4 @@
 [[LaTex\|LaTex]]   [[Python\|Python]]
 制作数学动画
 
-![[SquareToCircle.mp4]]
+ ![SquareToCircle](.SquareToCircle.mp4)
