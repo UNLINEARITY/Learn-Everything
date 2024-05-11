@@ -4,6 +4,7 @@
 
 <!-- Baidu Site Verification --> 
 <meta name="baidu-site-verification" content="codeva-9KnD0U41iT" /> 
+<meta name="msvalidate.01" content="E37F6D89C39A53DA30623F60A0822598" />
 <!-- End Baidu Site Verification -->
 
 <body>
