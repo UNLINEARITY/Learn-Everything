@@ -2,6 +2,7 @@
 {"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-05-11T16:06:57.870+08:00"}
 ---
 
+
 <!-- Baidu Site Verification -->
 <meta name="baidu-site-verification" content="codeva-9KnD0U41iT" />
 <!-- MS Validate Site Verification -->
@@ -9,6 +10,7 @@
 <!-- End Site Verifications -->
 
 
+<body>
 ### 序言
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周
 #### 为什么会有这个网站?
@@ -89,5 +91,7 @@ root((本网站))
 [[加入到网站的建设中\|加入到网站的建设中]]
 [[支持本网站\|支持本网站]]
 [[Unlinearity\|Unlinearity]]
+
+</body>
 
 
