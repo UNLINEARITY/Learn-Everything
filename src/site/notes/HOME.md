@@ -2,6 +2,9 @@
 {"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.501+08:00","updated":"2024-05-05T15:32:56.919+08:00"}
 ---
 
+<head>
+    <meta name="msvalidate.01" content="E37F6D89C39A53DA30623F60A0822598" />
+</head>
 
 ### 序言
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周
