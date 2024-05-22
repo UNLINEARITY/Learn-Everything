@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/PWM变换器.md","permalink":"/电机及电力拖动/PWM变换器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-24T16:24:25.708+08:00","updated":"2024-05-12T15:27:31.450+08:00"}
+dg-publish: true
+dg-path: 电机及电力拖动/PWM变换器.md
 ---
-
 [[PWM调速系统\|PWM调速系统]]
 ## 不可逆变换器
 ### 无制动的不可逆变换器
