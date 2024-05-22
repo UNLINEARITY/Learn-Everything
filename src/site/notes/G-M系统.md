@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/G-M系统.md","permalink":"/电机及电力拖动/G-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-18T22:02:15.438+08:00","updated":"2024-05-12T15:26:48.317+08:00"}
+dg-publish: true
+dg-path: 电机及电力拖动/G-M系统.md
 ---
-
 **Generator-Motor**
 旋转变流机组
 用交流电动机和直流发电机组成机组，以获得可调的直流电压
