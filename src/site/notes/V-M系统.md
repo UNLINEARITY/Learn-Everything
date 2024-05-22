@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/V-M系统.md","permalink":"/电机及电力拖动/V-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-17T23:29:31.767+08:00","updated":"2024-05-12T14:50:01.437+08:00"}
+dg-publish: true
+dg-path: 电机及电力拖动/V-M系统.md
 ---
-
 **Voltage-Motor**
 晶闸管-电动机系统
 静止式可控整流器
