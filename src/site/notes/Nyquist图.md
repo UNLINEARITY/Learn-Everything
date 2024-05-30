@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-01T22:32:04.000+08:00","updated":"2024-05-18T21:25:25.208+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-01T22:32:04.000+08:00","updated":"2024-05-26T18:51:53.651+08:00"}
 ---
 
 #图像 
-极坐标图/幅相曲线图/[[Nyquist\|Nyquist]] 图
+极坐标图/幅相曲线图/[[Nyquist\|Nyquist]]图
 
 $$\begin{align}
 G(j\omega )&=|G(j\omega )|e^{ j \angle G(j\omega ) } \\
