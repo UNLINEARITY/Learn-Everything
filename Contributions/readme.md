@@ -27,6 +27,8 @@
 	- `![[ ^]]`    `^` 文件后缀，引用特定的句子
 
 ### 4.呈现到网站上
+将下面的代码放在添加文件的开头
+
 ```markdown
 ---
 {"dg-publish":true,"dg-path":"所述目录/文件名.md","dg-pinned":true,"permalink":"/所述目录/文件名/","dgPassFrontmatter":true,"noteIcon":""}
