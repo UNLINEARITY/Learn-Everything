@@ -27,6 +27,8 @@
 	- `![[ ^]]`    `^` 文件后缀，引用特定的句子
 
 ### 4.呈现到网站上
+将要呈现的文件添加到[文件夹]（https://github.com/UNLINEARITY/Learn-Everything/tree/main/src/site/notes）中
+
 将下面的代码放在添加文件的开头
 
 ```markdown
