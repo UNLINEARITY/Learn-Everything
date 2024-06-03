@@ -66,7 +66,7 @@ This is a project based on Obsidian + Digital Garden + Vercel
 
 
 ### 1.对网站已有的知识的修改
-笔记的原Markdown文件在本库的src/site/notes目录下，可以随时查看
+笔记的原Markdown文件在本库的src/site/notes[目录](https://github.com/UNLINEARITY/Learn-Everything/tree/main/src/site/notes)下，可以随时查看
 
 ### 2.贡献新的知识分支
 可以在本网站的**Contributions**中添加属于自己的文件夹，增加独属于自己的分支！
@@ -80,9 +80,11 @@ This is a project based on Obsidian + Digital Garden + Vercel
 比如可能实现的功能？
 已实现：
 - [x] 为文章点赞、评论
+
 未实现：
 - [ ] 中英文切换？
 - [ ] 深色模式？
+- [ ] 3D显示知识图谱
 
 ## 四、该网站目前存在的问题
 - 由于本项目的构建者并非为计算机专业出身，对网站构建的知识不够了解，没有实现很多网站具备的功能
