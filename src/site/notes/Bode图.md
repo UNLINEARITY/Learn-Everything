@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Bode图.md","permalink":"/自动控制原理/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2024-05-26T19:19:42.777+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/Bode图.md","permalink":"/自动控制原理/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2024-06-06T09:27:58.086+08:00"}
 ---
 
 #图像 
@@ -48,6 +48,14 @@ dB/dec
 
 对应于 Bode 图中：
 从 $\phi(\omega^{-})$ 点向上/或下（取决于突变的方向）补作 $v\times 180^{\circ}$ 的虚直线至 $\phi(\omega^{+})$ 处
+
+
+
+### 对数幅频渐近特性
+一般取 $\omega=1$ 为起始点
+使用斜率不断地作出直线，来得到对数幅频渐近特性
+
+如果 $\omega=1$ 为转折频率，一般取比 1 小的点作直线
 
 
 
