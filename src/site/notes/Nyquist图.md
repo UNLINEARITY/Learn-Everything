@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-01T22:32:04.000+08:00","updated":"2024-05-26T18:51:53.651+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-01T22:32:04.000+08:00","updated":"2024-06-06T09:20:57.374+08:00"}
 ---
 
 #图像 
@@ -63,6 +63,12 @@ $P(\omega^{+})\quad Q(\omega^{+})\quad |G(\omega^{+})|\quad \angle G(\omega^{+})
 
 自然震荡频率的极限问题
 通过对幅值 $\left\lvert  G(j\omega) \right\rvert$ 求导，得到幅值和对应的角频率
+
+谐振频率
+谐振峰值
+
+[[经典环节的传递函数\|经典环节的传递函数]]
+
 
 ### Nyquist 曲线的增补
 
