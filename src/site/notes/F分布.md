@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"数学/数理统计/F分布.md","permalink":"/数学/数理统计/F分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-31T14:17:01.708+08:00","updated":"2024-05-31T14:29:11.878+08:00"}
+{"dg-publish":true,"dg-path":"数学/数理统计/F分布.md","permalink":"/数学/数理统计/F分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-31T14:17:01.708+08:00","updated":"2024-06-15T12:57:17.047+08:00"}
 ---
 
 $F\sim F(n_{1},n_{2})$
@@ -7,6 +7,7 @@ $F\sim F(n_{1},n_{2})$
 Fisher-Snedecor distribution
 
 $F=\dfrac{X / n_{1}}{Y / n_{2}}\sim F(n_{1},n_{2})$
+
 $\dfrac{1}{F}=\dfrac{Y / n_{2}}{X / n_{1}}\sim F(n_{2},n_{1})$
 
 $X\sim \chi^{2}(n_{1})\quad Y\sim \chi^{2}(n_{2})$     [[卡方分布\|卡方分布]]
@@ -26,4 +27,10 @@ $$\begin{align}
 
 
 主要用于[[方差分析\|方差分析]]和[[回归分析\|回归分析]]中的
+
+转化表述，对立事件
+
+
+
+
 
