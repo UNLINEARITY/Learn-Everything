@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"数学/概率论/n重伯努利试验.md","permalink":"/数学/概率论/n重伯努利试验/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.287+08:00","updated":"2024-06-02T10:35:48.432+08:00"}
+{"dg-publish":true,"dg-path":"数学/概率论/n重伯努利试验.md","permalink":"/数学/概率论/n重伯努利试验/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.287+08:00","updated":"2024-06-15T19:30:25.285+08:00"}
 ---
 
-在 [[统计独立性\|n重独立置复实验]]中
+在 [[事件的独立性\|n重独立置复实验]]中
 如果每次的试验结果为两个：$A$ 与 $\bar{A}$
 则为 $n$ 重[[伯努利\|伯努利]]试验     
 
