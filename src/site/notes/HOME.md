@@ -1,9 +1,8 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-06-16T23:07:27.664+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-06-16T23:24:44.813+08:00"}
 ---
 
 ### 序言
-
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周
 #### 为什么会有这个网站?
 >这个网站的由来**纯粹是一个巧合**
