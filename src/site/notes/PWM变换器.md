@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/PWM变换器.md","permalink":"/电机及电力拖动/PWM变换器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.821+08:00","updated":"2024-06-17T00:00:30.706+08:00"}
+{"dg-publish":true,"dg-path":"电机及电力拖动/PWM变换器.md","permalink":"/电机及电力拖动/PWM变换器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.821+08:00","updated":"2024-06-18T01:15:38.952+08:00"}
 ---
 
 [[PWM调速系统\|PWM调速系统]]
@@ -112,7 +112,7 @@ $$\begin{align}
 
 **调速范围**   $\rho:0\sim 1$   $\gamma :-1\sim 1$
 调节占空比，
--  $\rho>0.5$  , $\gamma>0$ 产生反向电压，使电机正转
+-  $\rho>0.5$  , $\gamma>0$ 产生正向电压，使电机正转
 -  $\rho<0.5$  , $\gamma<0$ 产生反向电压，使电机反转
 -  $\rho=0.5$  , $\gamma=0$   电机停止
 
