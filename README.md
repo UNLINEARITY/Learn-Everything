@@ -10,6 +10,10 @@ This is a project based on Obsidian + Digital Garden + Vercel
 你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果! 
 
 [![Stars](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
+[![Forks](https://img.shields.io/github/forks/UNLINEARITY/Learn-Everything.svg)](https://github.com/ysyisyourbrother/SYSU_Notebook/network/members)
+![GitHub repo size](https://img.shields.io/github/UNLINEARITY/Learn-Everything.svg)
+[![Issues](https://img.shields.io/github/issues/UNLINEARITY/Learn-Everything.svg)]()
+![GitHub pull requests](https://img.shields.io/github/issues-pr/UNLINEARITY/Learn-Everything.svg)
 
 ## 一、核心的思想
 >***你是否经常听到：微积分积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
