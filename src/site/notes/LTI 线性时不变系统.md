@@ -1,33 +1,30 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-04-29T18:29:22.012+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-06-22T13:26:31.395+08:00"}
 ---
 
-LTI system
-linear  time invariant
+**LTI system**     **linear  time invariant**
 线性定常系统
 
 ***线性*** ：
-叠加原理
 
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
-
-
-
-$\begin{align} 
+$$\begin{align} 
 o\{\alpha f_{1}(t)\}&=\alpha x_{1}(t) \\
 
-o\{f_{1}(t)+f_{2}(t)\}&=x_{1}(t)+x_{2}(t) \\ \\
-
+o\{f_{1}(t)+f_{2}(t)\}&=x_{1}(t)+x_{2}(t) \\ 
 o\{\alpha_{1} f_{1}(t)+\alpha_{2} f_{2}(t)\}&=\alpha_{1}x_{1}(t)+\alpha_{2}x_{2}(t)
-\end{align}$
+\end{align}$$
 
-</div></div>
+**叠加原理**
+- 两个外作用同时加于系统所产生的总输出，等于各个外作用单独作用时分别产生的输出之和
+- 外作用的数值增大若干倍时，输出相应增大同样的倍数
 
 ***时不变***：
+
 $$\begin{align}
  o\{ f(t)\}&=x(t)\\
 o\{ f(t-\tau)\}&=x(t-\tau)
 \end{align}$$
+
 系统的输出信号在时间上的延迟等于输入信号在时间上的延迟
 
 
