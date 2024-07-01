@@ -8,6 +8,7 @@ This is a project based on Obsidian + Digital Garden + Vercel
 ~~你可以访问这个[网站](https://learn-for-everything.vercel.app/),看看所搭建成果(~~需要科学上网，不过我相信上GitHub的人应该都能流畅访问吧~~)~~
 
 你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果! 
+<p align='center'><img src='src/SVGViewer (45).svg' width=60%></p>  
 
 [![Stars](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
 [![Forks](https://img.shields.io/github/forks/UNLINEARITY/Learn-Everything.svg)](https://github.com/ysyisyourbrother/SYSU_Notebook/network/members)
