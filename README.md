@@ -11,7 +11,6 @@ This is a project based on Obsidian + Digital Garden + Vercel
 
 [![Stars](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
 [![Forks](https://img.shields.io/github/forks/UNLINEARITY/Learn-Everything.svg)](https://github.com/ysyisyourbrother/SYSU_Notebook/network/members)
-![GitHub repo size](https://img.shields.io/github/UNLINEARITY/Learn-Everything.svg)
 [![Issues](https://img.shields.io/github/issues/UNLINEARITY/Learn-Everything.svg)]()
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UNLINEARITY/Learn-Everything.svg)
 
