@@ -1,14 +1,18 @@
 ---
-{"dg-publish":true,"dg-path":"工具/manim.md","permalink":"/工具/manim/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.867+08:00","updated":"2024-06-27T22:37:15.504+08:00"}
+{"dg-publish":true,"dg-path":"工具/manim.md","permalink":"/工具/manim/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.867+08:00","updated":"2024-06-29T23:08:22.691+08:00"}
 ---
 
 An animation engine for precise programmatic animations.   
 制作数学动画      [官方文档](https://docs.manim.community/en/stable/index.html#)
+[社区](https://www.manim.community/)
+
 
 主文件由  [[Python\|Python]]  编写
 使用  [[PowerShell\|PowerShell]]  自动化配置
 使用   [[FFmpeg\|FFmpeg]]   渲染视频
 [[LaTex\|LaTex]]  书写数学公式  
+[[Opengl\|Opengl]] 交互性渲染
+
 
 -qp
 ```powershell
@@ -50,7 +54,8 @@ manim -flag file.py classname
 - `classname`   要渲染的Manim场景的类名
 	Manim会查找这个类，并执行其中的`construct`方法来生成动画。
 
-#### 命令行选项
+
+命令行选项
 **command line flags**
 
 `-p`  plays the animation once it is rendered
@@ -66,3 +71,63 @@ manim -flag file.py classname
 
 
 ![DifferentRotations_ManimCE_v0.18.0.post0.gif](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/DifferentRotations_ManimCE_v0.18.0.post0.gif)
+
+
+### Mobjects
+Mobject 类是所有其他 mobject 的抽象基类
+Mobjects are the basic building blocks for all manim animations.
+
+Each class that derives from Mobject represents an object that can be displayed on the screen.
+
+By default, mobjects are placed at the center of coordinates, or _origin_, when they are first created.
+Further, the Shapes scene places the mobjects by using the shift () method 
+
+```python
+# 初始位置设置
+circle=Circle()
+circle.shift(ORIGN/UP/DOWN/LEFT/RIGHT)
+#  UP/DOWN/LEFT/RIGHT 上、下、左、右单位向量
+square=Square().shift(UP*2)
+```
+
+```python
+# 初始位置设置
+circle=Circle()
+circle.shift(ORIGN/UP/DOWN/LEFT/RIGHT)
+#  UP/DOWN/LEFT/RIGHT 上、下、左、右单位向量
+square=Square().shift(UP*2)
+```
+
+
+```python
+circle.set_stroke(color= COLOR, width= )  # 设置线条
+circle.set_fill(COLOR, opacity= )   # 设置填充
+```
+
+### Animations 动画
+At the heart of manim is animation. Generally, you can add an animation to your scene by calling the `play ()` method.
+
+animations are procedures that interpolate between two mobjects
+
+```python
+self.play(FadeIn(square))
+self.play(Rotate(square,PI/4))
+self.play(FadeOut(square))
+```
+
+```python 
+self.play(square.animate.shift(UP), run_time=3)
+```
+
+
+### LaTeX 渲染 
+
+```python 
+tex = MathTex(r"\string",font_size=)
+tex = Tex(r"$\string$",font_size=)
+```
+
+`Tex`     渲染一般字符串
+`MathTex`   默认渲染 `$ $`  公式符号
+
+
