@@ -1,10 +1,10 @@
 # Learn Everything!
-This is a project based on Obsidian + Digital Garden + Vercel       
- **[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**
+This is a project based on Obsidian + Digital Garden + Vercel    (**[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**) 
 
 
 <p align='center'><img src='src/SVGViewer (45).svg' width=60%></p>  
-你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果!   
+
+你可以访问这个[网站](https://www.unlinearity.top),看看所搭建成果!   
 
 [![Stars](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
 [![Forks](https://img.shields.io/github/forks/UNLINEARITY/Learn-Everything.svg)](https://github.com/ysyisyourbrother/SYSU_Notebook/network/members)
@@ -14,7 +14,7 @@ This is a project based on Obsidian + Digital Garden + Vercel
 
 
 ## 一、核心的思想
->***你是否经常听到：微积分积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
+>***你是否经常听到：积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
 
 >***或者经常在想：我学xx课程究竟对之后的学习生活有什么帮助?学习这些知识有什么意义?***
 
@@ -38,6 +38,10 @@ This is a project based on Obsidian + Digital Garden + Vercel
 3. 将所有前置的知识与实际的生活、实际的工作相联系
 
 ## 二、网站的内容
+### 粗略的演示 
+
+![[src/site/img/user/功能性文件夹/载入的媒体资源/2024-07-0200-36-17-ezgif.com-crop 1.gifsrc/site/img/user/功能性文件夹/载入的媒体资源/2024-07-0200-36-17-ezgif.com-crop 1.gif]]
+
 ### 目前该网站**涵盖**并**持续更新**的内容！！！
 **较为完善的部分：**
 - [x] 自动控制原理——经典控制理论
