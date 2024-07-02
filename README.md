@@ -1,19 +1,17 @@
 # Learn Everything!
-This is a project based on Obsidian + Digital Garden + Vercel
+This is a project based on Obsidian + Digital Garden + Vercel       
+ **[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**
 
-**[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**
 
-这个项目是以Obsidian的Digital Garden插件为核心，利用Vercel部署的网站
-
-~~你可以访问这个[网站](https://learn-for-everything.vercel.app/),看看所搭建成果(~~需要科学上网，不过我相信上GitHub的人应该都能流畅访问吧~~)~~
-
-你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果! 
 <p align='center'><img src='src/SVGViewer (45).svg' width=60%></p>  
+你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果!   
 
 [![Stars](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
 [![Forks](https://img.shields.io/github/forks/UNLINEARITY/Learn-Everything.svg)](https://github.com/ysyisyourbrother/SYSU_Notebook/network/members)
 [![Issues](https://img.shields.io/github/issues/UNLINEARITY/Learn-Everything.svg)]()
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UNLINEARITY/Learn-Everything.svg)
+
+
 
 ## 一、核心的思想
 >***你是否经常听到：微积分积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
