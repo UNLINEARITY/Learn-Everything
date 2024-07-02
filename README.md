@@ -38,9 +38,6 @@ This is a project based on Obsidian + Digital Garden + Vercel    (**[English](ht
 3. 将所有前置的知识与实际的生活、实际的工作相联系
 
 ## 二、网站的内容
-### 粗略的演示 
-
-![[src/site/img/user/功能性文件夹/载入的媒体资源/2024-07-0200-36-17-ezgif.com-crop 1.gifsrc/site/img/user/功能性文件夹/载入的媒体资源/2024-07-0200-36-17-ezgif.com-crop 1.gif]]
 
 ### 目前该网站**涵盖**并**持续更新**的内容！！！
 **较为完善的部分：**
