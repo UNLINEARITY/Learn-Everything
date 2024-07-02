@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-07-02T01:28:39.648+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-07-03T00:09:51.546+08:00"}
 ---
 
 
@@ -66,16 +66,20 @@ root((本网站))
 [[复变函数与积分变换\|复变函数与积分变换]]
 [[自动控制原理\|自动控制原理]]
 [[技术经济与工程管理\|技术经济与工程管理]]
+
 #### 即将完善
-[[线性代数\|线性代数]]
-[[微积分\|微积分]]
 [[电机及电力拖动\|电机及电力拖动]]
-[[51 单片机\|微机原理及其应用]]
+[[51 单片机\|微机原理及其应用]]   8051 基础
+[[微积分\|微积分]]
+#### 之后完善
+
+[[线性代数\|线性代数]]
 [[数字电路\|数字电路]]
 [[模拟电路\|模拟电路]]
 [[物理\|物理]]
 [[计算机\|计算机]]
 [[数学建模\|数学建模]]
+
 ### 关于该网站的更多信息
 [本网站库的地址](https://github.com/UNLINEARITY/Learn-for-Everything)
 [[网站的构建历程\|网站的构建历程]]
