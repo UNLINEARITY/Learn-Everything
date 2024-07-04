@@ -38,6 +38,40 @@ This is a project based on Obsidian + Digital Garden + Vercel    (**[English](ht
 3. 将所有前置的知识与实际的生活、实际的工作相联系
 
 ## 二、网站的内容
+```mermaid
+mindmap
+root((本网站))
+	数学
+		微积分
+		概率论
+		数理统计
+		复变函数
+		积分变换
+	自动控制原理
+		经典控制理论
+		现代控制理论
+			
+	物理
+		力学
+		电磁学
+		热学
+		光学
+		量子力学
+	计算机
+		编程语言
+			MATLAB
+			Python
+			C++
+		单片机
+	电力拖动
+		直流拖动系统
+		交流拖动系统
+	工具
+		Markdown
+		LaTeX
+		mermaid
+		
+```
 
 ### 目前该网站**涵盖**并**持续更新**的内容！！！
 **较为完善的部分：**
