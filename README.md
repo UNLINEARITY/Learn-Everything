@@ -1,22 +1,20 @@
 # Learn Everything!
-This is a project based on Obsidian + Digital Garden + Vercel
+This is a project based on Obsidian + Digital Garden + Vercel    (**[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**) 
 
-**[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**
 
-这个项目是以Obsidian的Digital Garden插件为核心，利用Vercel部署的网站
-
-~~你可以访问这个[网站](https://learn-for-everything.vercel.app/),看看所搭建成果(~~需要科学上网，不过我相信上GitHub的人应该都能流畅访问吧~~)~~
-
-你可以访问这个[网站](https://www.unlinearity.top)看看所搭建成果! 
 <p align='center'><img src='src/SVGViewer (45).svg' width=60%></p>  
+
+你可以访问这个[网站](https://www.unlinearity.top),看看所搭建成果!   
 
 [![Stars](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
 [![Forks](https://img.shields.io/github/forks/UNLINEARITY/Learn-Everything.svg)](https://github.com/ysyisyourbrother/SYSU_Notebook/network/members)
 [![Issues](https://img.shields.io/github/issues/UNLINEARITY/Learn-Everything.svg)]()
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UNLINEARITY/Learn-Everything.svg)
 
+
+
 ## 一、核心的思想
->***你是否经常听到：微积分积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
+>***你是否经常听到：积分很有用/线性代数在之后的学习里有帮助/量子力学/电磁学/电机/算法... 诸如此类的说辞***  
 
 >***或者经常在想：我学xx课程究竟对之后的学习生活有什么帮助?学习这些知识有什么意义?***
 
@@ -27,6 +25,8 @@ This is a project based on Obsidian + Digital Garden + Vercel
 这就是本库存在的意义！
 
 该项目旨在构建以**双向链接**和**关系图谱**为核心的知识库
+
+<p align='center'><img src='pictures/大体介绍.svg' width=90%></p>  
 
 强调知识与知识之间的联系，注重数理基础，深入探讨数学与物理知识在各个领域的作用与影响
 
@@ -40,6 +40,43 @@ This is a project based on Obsidian + Digital Garden + Vercel
 3. 将所有前置的知识与实际的生活、实际的工作相联系
 
 ## 二、网站的内容
+```mermaid
+mindmap
+root((本网站))
+	数学
+		微积分
+		概率论
+		数理统计
+		复变函数
+		积分变换
+	自动控制原理
+		经典控制理论
+		现代控制理论
+			
+	物理
+		力学
+		电磁学
+		热学
+		光学
+		量子力学
+	计算机
+		编程语言
+			MATLAB
+			Python
+			C++
+		单片机
+			8051
+			STM32
+	电力拖动
+		直流拖动系统
+		交流拖动系统
+	工具
+		Markdown
+		LaTeX
+		mermaid
+		
+```
+
 ### 目前该网站**涵盖**并**持续更新**的内容！！！
 **较为完善的部分：**
 - [x] 自动控制原理——经典控制理论
