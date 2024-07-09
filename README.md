@@ -1,5 +1,5 @@
 # Learn Everything!
-This is a project based on Obsidian + Digital Garden + Vercel (**[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/English.md)**)
+This is a project based on Obsidian + Digital Garden + Vercel (**[English](https://github.com/UNLINEARITY/Learn-for-Everything/blob/main/translation/中文.md)**)
 
 <p align='center'><img src='src/SVGViewer (45).svg' width=60%></p>
 
@@ -10,6 +10,8 @@ You can visit this [website](https://www.unlinearity.top) to see the results!
 [![Issues](https://img.shields.io/github/issues/UNLINEARITY/Learn-Everything.svg)]()
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UNLINEARITY/Learn-Everything.svg)
 
+> [!warning]
+> Due to the limitations of time, energy, and skill of the website builder, the main content of the website is currently presented in Chinese. An English version will be added in the future.
 ***
 
 ## I. Core Ideas
