@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-pinned":true,"dg-path":"关于该网站/网站的贡献者/Unlinearity.md","permalink":"/关于该网站/网站的贡献者/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2024-07-08T11:38:30.947+08:00"}
+{"dg-publish":true,"dg-pinned":true,"dg-path":"关于该网站/网站的贡献者/Unlinearity.md","permalink":"/关于该网站/网站的贡献者/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2024-07-10T01:31:26.806+08:00"}
 ---
 
 
@@ -34,14 +34,6 @@
 但实际上**非线性：Nonlinearity**  
 
 
-### 爱好
-
->“整体大于部分之和”
->“反馈是控制的基础”
->“信息是用来减少不确定性的”
->“非平衡是有序之源”
->“局部相互作用产生全局协同效应”
->“系统在临界点附近可能经历质的飞跃”
 
 
 
