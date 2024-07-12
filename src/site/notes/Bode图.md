@@ -1,8 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Bode图.md","permalink":"/自动控制原理/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2024-06-24T12:40:34.730+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/Bode图.md","permalink":"/自动控制原理/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2024-07-11T18:15:42.164+08:00"}
 ---
 
-#图像 
+#Graph 
+
 ***对数频率特性图：***
 - **横坐标：**
 	频率的[[对数分度\|对数分度]]   $\lg \omega$    $rad / s$
