@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-01T22:32:04.000+08:00","updated":"2024-06-23T23:28:56.585+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-01T22:32:04.000+08:00","updated":"2024-07-11T18:15:49.015+08:00"}
 ---
 
-#图像 
+#Graph 
 
 极坐标图/**幅相曲线图**/[[Nyquist\|Nyquist]]图
 
