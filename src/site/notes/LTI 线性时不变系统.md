@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-06-22T13:26:31.395+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-07-11T01:49:23.622+08:00"}
 ---
 
 **LTI system**     **linear  time invariant**
@@ -30,7 +30,7 @@ o\{ f(t-\tau)\}&=x(t-\tau)
 
 工具：
 [[微分方程\|微分方程]]
-[[傅里叶变换\|傅里叶变换]]、[[拉普拉斯变换\|拉普拉斯变换]]或 [[Z 变换\|Z 变换]] 
+[[傅里叶变换\|傅里叶变换]]、[[拉普拉斯变换\|拉普拉斯变换]]或 [[z变换\|z变换]] 
 [[传递函数\|传递函数]]
 
 具体系统：
