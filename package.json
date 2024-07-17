@@ -31,7 +31,7 @@
         "eleventy-plugin-gen-favicons": "^1.1.2",
         "eleventy-plugin-nesting-toc": "^1.3.0",
         "fs-file-tree": "^1.1.1",
-        "glob": "^10.2.1",
+        "glob": "^11.0.0",
         "gray-matter": "^4.0.3",
         "markdown-it": "^14.1.0",
         "markdown-it-anchor": "^9.0.1",
