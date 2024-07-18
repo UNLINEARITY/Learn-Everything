@@ -1,0 +1,70 @@
+<aside id="floating-control">
+    <a  id="emailme" href="mailto:connect@utsob.me?subject=Regarding {{title}}&body=Discussing {{meta.siteBaseUrl}}{{permalink}}"><i  icon-name="mail-plus" title="Discuss" aria-hidden="true"></i></a>
+    <span id="theme-switch">
+        <i class="svg-icon light" icon-name="sun" aria-hidden="true"></i>
+        <i class="svg-icon dark" icon-name="moon" aria-hidden="true"></i>
+        <i class="svg-icon auto" icon-name="sun-moon" aria-hidden="true"></i>
+    </span>
+</aside>
+
+    
+<script>
+    function setThemeIcon(theme) {
+        let toAdd;
+        switch (theme) {
+            case 'dark':
+                toRemove = ['auto', 'light'];
+                break;
+            case 'light':
+                toAdd = 'fa-adjust';
+                toRemove = ['dark', 'auto'];
+                break;
+            default:
+                toRemove = ['light', 'dark'];
+                break;
+        }
+        document.getElementById('theme-switch').classList.add(theme);
+        document.getElementById('theme-switch').classList.remove(...toRemove);
+    }
+    function setTheme(theme, setIcon) {
+        if (setIcon) {
+            setThemeIcon(theme);
+        }
+        if (theme == 'dark') {
+            document.body.classList.remove('theme-light');
+            document.body.classList.add('theme-dark');
+        } else if (theme == "light") {
+            document.body.classList.add('theme-light');
+            document.body.classList.remove('theme-dark');
+        } else {
+            theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+            setTheme(theme, false);
+        }
+        
+    }
+    let theme = window.localStorage.getItem('site-theme') || "light";
+    setTheme(theme, true);
+    window.theme = theme;
+    window.localStorage.setItem('site-theme', theme);
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(event) {
+        const settings = window.localStorage.getItem('site-theme');
+        if (!settings || settings == "auto") {
+            window.localStorage.setItem('site-theme', "auto");
+            setTheme("auto", true);
+        }
+    });
+    document.getElementById('theme-switch').addEventListener('click', function() {
+        let theme;
+        if (window.theme == 'auto') {
+            theme = "dark";
+        } else if (window.theme == 'dark') {
+            theme = 'light'
+        } else {
+            theme = 'auto';
+        }
+        setTheme(theme, true);
+        window.localStorage.setItem('site-theme', theme);
+        window.theme = theme;
+    })
+</script>
