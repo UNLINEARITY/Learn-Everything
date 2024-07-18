@@ -216,7 +216,6 @@ body {
   // .cm-s-obsidian>*[id] {
   //   position: relative;
   //   cursor: pointer;
-
   //   &:hover {
   //     border: 1px dotted;
   //     border-color: var(--text-accent);
@@ -224,7 +223,6 @@ body {
   //     margin-right: -10px;
   //     padding: 10px;
   //   }
-
   //   &:hover::before {
   //     content: "Double-click to copy link";
   //     position: absolute;
@@ -266,7 +264,7 @@ body {
     //     border-radius: 5px; /* 提示消息的圆角 */
     //     border: 1px solid var(--text-accent); /* 提示消息的边框 */
     // }
-}
+// }
 
 .cm-s-obsidian > *[id] {
     position: relative;
