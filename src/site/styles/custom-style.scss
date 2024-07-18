@@ -232,24 +232,29 @@ body {
   .cm-s-obsidian > *[id] {
     position: relative;
     cursor: pointer;
-    border: 1px solid transparent; /* 初始状态下边框透明 */
-    transition: border-color 0.3s ease; /* 边框颜色过渡效果 */
+    border-radius: 5px; /* 圆角边框 */
 
     &:hover {
-        border-color: var(--text-accent); /* 悬停时显示边框颜色 */
+        border: 1px solid var(--text-accent); /* 边框样式 */
+        padding: 8px; /* 内边距 */
+        background-color: rgba(0, 111, 139, 0.1); /* 悬停时的背景色，可根据需要调整 */
     }
 
     &:hover::before {
-        content: "双击以复制链接";
+        content: "双击来复制链接";
         position: absolute;
         right: 0;
-        top: -1.55em;
+        top: -2em; /* 调整顶部消息位置，避免影响文字 */
         font-weight: normal;
         font-size: 12px;
         color: var(--text-accent);
         font-variant: initial;
         letter-spacing: 0.24px;
         line-height: 14px;
+        background-color: white; /* 提示消息的背景色 */
+        padding: 2px 8px; /* 提示消息的内边距 */
+        border-radius: 5px; /* 提示消息的圆角 */
+        border: 1px solid var(--text-accent); /* 提示消息的边框 */
     }
 }
 
@@ -430,7 +435,7 @@ body {
         height: 1.2em;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(/img/Logo.svg);
+        background-image: url(/site/img/Logo.svg);
         margin-right: 5px;
         background-position: bottom;
       }
