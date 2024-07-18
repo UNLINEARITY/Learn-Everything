@@ -1,0 +1,9 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mathjaxContainers = document.querySelectorAll("mjx-container.MathJax");
+    mathjaxContainers.forEach((container) => {
+      container.style.overflowX = "auto";
+      container.style.overflowY = "hidden";
+    });
+  });
+</script>
