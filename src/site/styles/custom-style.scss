@@ -229,95 +229,36 @@ body {
   //   }
   // }
 
-//   .cm-s-obsidian > *[id] {
-//     position: relative;
-//     cursor: pointer;
-//     border-radius: 5px; /* 圆角边框 */
-    
-//     &:hover {
-//         border: 1px solid var(--text-accent); /* 边框样式 */
-//         padding: 8px; /* 内边距 */
-//         background-color: rgba(0, 111, 139, 0.1); /* 悬停时的背景色，可根据需要调整 */
-//     }
-
-//     &:hover::before {
-//         content: "双击来复制链接";
-//         position: absolute;
-//         right: 0;
-//         top: -2em; /* 调整顶部消息位置，避免影响文字 */
-//         font-weight: normal;
-//         font-size: 12px;
-//         color: var(--text-accent);
-//         font-variant: initial;
-//         letter-spacing: 0.24px;
-//         line-height: 14px;
-//         background-color: white; /* 提示消息的背景色 */
-//         padding: 2px 8px; /* 提示消息的内边距 */
-//         border-radius: 5px; /* 提示消息的圆角 */
-//         border: 1px solid var(--text-accent); /* 提示消息的边框 */
-//     }
-// }
-
   .cm-s-obsidian > *[id] {
     position: relative;
     cursor: pointer;
     border-radius: 5px; /* 圆角边框 */
-    padding: 8px; /* 内边距 */
-    background-color: rgba(0, 111, 139, 0.1); /* 默认背景色 */
-    transition: background-color 0.3s ease; /* 过渡动画 */
-
+    
     &:hover {
-        background-color: rgba(0, 111, 139, 0.3); /* 悬停时的背景色 */
+        border: 1px solid var(--text-accent); /* 边框样式 */
+        padding: 8px; /* 内边距 */
+        background-color: rgba(0, 111, 139, 0.1); /* 悬停时的背景色，可根据需要调整 */
     }
 
-    &:before {
-        content: "双击来复制链接";
-        position: absolute;
-        right: 0;
-        top: -2em; /* 调整顶部消息位置 */
-        font-weight: normal;
-        font-size: 12px;
-        color: var(--text-accent);
-        background-color: white; /* 提示消息的背景色 */
-        padding: 2px 8px; /* 提示消息的内边距 */
-        border-radius: 5px; /* 提示消息的圆角 */
-        border: 1px solid var(--text-accent); /* 提示消息的边框 */
-        opacity: 0; /* 默认隐藏 */
-        transition: opacity 0.3s ease; /* 过渡动画 */
-    }
-
-    &:hover::before {
-        opacity: 1; /* 悬停时显示提示消息 */
-    }
-
-    /* 边框动画效果 */
-    animation: borderAnimation 5s infinite linear;
-    border-radius: 5px;
-    padding: 8px;
-
-    @keyframes borderAnimation {
-        0% {
-            border-image: linear-gradient(45deg, #f00, #0f0, #00f) 1;
-            border-radius: 5px;
-        }
-        25% {
-            border-image: linear-gradient(135deg, #f00, #0f0, #00f) 1;
-            border-radius: 10px;
-        }
-        50% {
-            border-image: linear-gradient(225deg, #f00, #0f0, #00f) 1;
-            border-radius: 15px;
-        }
-        75% {
-            border-image: linear-gradient(315deg, #f00, #0f0, #00f) 1;
-            border-radius: 20px;
-        }
-        100% {
-            border-image: linear-gradient(0deg, #f00, #0f0, #00f) 1;
-            border-radius: 25px;
-        }
-    }
+    // &:hover::before {
+    //     content: "双击来复制链接";
+    //     position: absolute;
+    //     right: 0;
+    //     top: -2em; /* 调整顶部消息位置，避免影响文字 */
+    //     font-weight: normal;
+    //     font-size: 12px;
+    //     color: var(--text-accent);
+    //     font-variant: initial;
+    //     letter-spacing: 0.24px;
+    //     line-height: 14px;
+    //     background-color: white; /* 提示消息的背景色 */
+    //     padding: 2px 8px; /* 提示消息的内边距 */
+    //     border-radius: 5px; /* 提示消息的圆角 */
+    //     border: 1px solid var(--text-accent); /* 提示消息的边框 */
+    // }
 }
+
+
 
   .referred {
     border: 1px dashed;
