@@ -3,6 +3,11 @@ body.theme-dark {
   --text-accent-hover: #0084a5;
   --interactive-accent: #006f8b;
   --h1-color: var(--interactive-accent);
+  --h2-color: #5C98C2;
+  --h3-color: #6B84BA;
+  --h4-color: #806EA9;
+  --h5-color: #90578C;
+  --h6-color: #90578C;
 }
 
 body.theme-light {
@@ -10,6 +15,11 @@ body.theme-light {
   --text-accent-hover: #006f8b;
   --interactive-accent: #004d61;
   --h1-color: var(--interactive-accent);
+  --h2-color: #008F9C;
+  --h3-color: #00AF9E;
+  --h4-color: #58CC91;
+  --h5-color: #A6E57D;
+  --h6-color: #F9F871;
 }
 
 body {
@@ -229,16 +239,16 @@ body {
   //   }
   // }
 
-  .cm-s-obsidian > *[id] {
-    position: relative;
-    cursor: pointer;
-    border-radius: 5px; /* 圆角边框 */
+  // .cm-s-obsidian > *[id] {
+  //   position: relative;
+  //   cursor: pointer;
+  //   border-radius: 5px; /* 圆角边框 */
     
-    &:hover {
-        border: 1px solid var(--text-accent); /* 边框样式 */
-        padding: 8px; /* 内边距 */
-        background-color: rgba(0, 111, 139, 0.1); /* 悬停时的背景色，可根据需要调整 */
-    }
+  //   &:hover {
+  //       border: 1px solid var(--text-accent); /* 边框样式 */
+  //       padding: 8px; /* 内边距 */
+  //       background-color: rgba(0, 111, 139, 0.1); /* 悬停时的背景色，可根据需要调整 */
+  //   }
 
     // &:hover::before {
     //     content: "双击来复制链接";
@@ -258,7 +268,17 @@ body {
     // }
 }
 
+.cm-s-obsidian > *[id] {
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
 
+.cm-s-obsidian > *[id]:hover {
+    border: 1px solid var(--text-accent);
+    background-color: rgba(0, 111, 139, 0.1);
+}
 
   .referred {
     border: 1px dashed;
