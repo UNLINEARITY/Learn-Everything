@@ -1,0 +1,50 @@
+<script>
+  {# Footnote script #}
+function fancyFootnote(element) {
+  var notenum = 0;
+  document.querySelectorAll(element).forEach(function (post) {
+    const footnotes = post.querySelectorAll(".footnotes [id^='fn']");
+    footnotes.forEach(function (entry) {
+      var note = document.createElement("div");
+      var did = entry.id.split("fn")[1];
+      var fid = "fnote" + "-" + notenum + "-" + did;
+      entry.querySelector("a.footnote-backref").href = "#" + fid;
+
+      var notename = "fnote" + "-" + notenum + "-" + did;
+      note.id = notename;
+      note.className = "content fnote";
+      note.innerHTML =
+        '<div class="note-wrapper">' + entry.innerHTML + "</div>";
+      document.body.append(note);
+    });
+    const markers = post.querySelectorAll("[id^='fnref']");
+    markers.forEach(function (entry) {
+      entry.innerText = entry.innerText.substring(1, entry.innerText.length - 1);
+      var did = "fnote-" + notenum + '-' + entry.id.split("fnref")[1];
+      entry.classList.add("pointer", "fnote-marker");
+      entry.addEventListener("click", function (e) {
+        e.preventDefault();
+        shownote(did);
+      });
+    });
+    notenum++;
+  });
+}
+
+function shownote(f) {
+  document.querySelectorAll(".fnote").forEach(function(el) {
+    el.classList.remove("shownote");
+  });
+  document.querySelector("#" + f).classList.add("shownote");
+}
+
+document.addEventListener("mouseup", function (event) {
+  document.querySelectorAll(".fnote").forEach(function (container) {
+    if (container !== event.target && !container.contains(event.target)) {
+      container.classList.remove("shownote");
+    }
+  });
+});
+
+fancyFootnote(".content")
+</script>
