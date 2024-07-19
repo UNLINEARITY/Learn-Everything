@@ -11,7 +11,7 @@ body.theme-dark {
 }
 
 body.theme-light {
-  --text-accent: #004d61;
+  --text-accent:#007B9C;
   --text-accent-hover: #006f8b;
   --interactive-accent: #004d61;
   --h1-color: var(--interactive-accent);
@@ -62,26 +62,26 @@ body {
   }
 
   h2 {
-    font-size: 1.5em !important;
+    font-size: 1.35em !important;
     /* 30px/16=1.875em */
   }
 
   h3 {
-    font-size: 1.17em !important;
+    font-size: 1.25em !important;
   }
 
   h4 {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
     font-weight: bolder !important;
   }
 
   h5 {
-    font-size: 0.83em !important;
+    font-size: 1.15em !important;
     font-weight: bolder !important;
   }
 
   h6 {
-    font-size: 0.67em !important;
+    font-size:1.05em !important;
     font-weight: bolder !important;
   }
 
@@ -129,10 +129,10 @@ body {
   }
 
   nav.filetree-sidebar {
-    top: 85px;
-    left: 20px;
+    top: 65px;
+    left: 18px;
     position: fixed;
-    height: calc(100% - 160px);
+    height: calc(100% - 100px);
     display: flex;
     flex-direction: column;
     border-radius: 10px;
