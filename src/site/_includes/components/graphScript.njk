@@ -21,36 +21,55 @@
     }
 
     function filterLocalGraphData(graphData, depth) {
-        if (graphData == null) {
-            return null;
-        }
-        let remaining = JSON.parse(JSON.stringify(graphData.nodes));
-        let links = JSON.parse(JSON.stringify(graphData.links));
-        let currentLink = decodeURI(window.location.pathname);
-        let currentNode = remaining[currentLink] || Object.values(remaining).find((v) => v.home);
-        delete remaining[currentNode.url];
-        if (!currentNode.home) {
-            let home = Object.values(remaining).find((v) => v.home);
+    if (graphData == null) {
+        return null;
+    }
+
+    let remaining = JSON.parse(JSON.stringify(graphData.nodes));
+    let links = JSON.parse(JSON.stringify(graphData.links));
+    let currentLink = decodeURI(window.location.pathname);
+    let currentNode = remaining[currentLink] || Object.values(remaining).find((v) => v.home);
+    
+    if (!currentNode) {
+        return { nodes: [], links: [] }; // Handle case where currentNode is not found
+    }
+    
+    // Remove the current node from remaining nodes
+    delete remaining[currentNode.url];
+
+    // If the current node is not the home node, remove the home node from remaining nodes
+    if (!currentNode.home) {
+        let home = Object.values(remaining).find((v) => v.home);
+        if (home) {
             delete remaining[home.url];
         }
-        currentNode.current = true;
-        let existing = {};
-        existing[currentNode.url] = currentNode;
-        for (let i = 0; i < depth; i++) {
-            existing, remaining = getNextLevelNeighbours(existing, remaining);
-        }
-        nodes = Object.values(existing);
-        if (!currentNode.home) {
-            nodes = nodes.filter(n => !n.home);
-        }
-        let ids = nodes.map((n) => n.id);
-        return {
-            nodes,
-            links: links.filter(function (con) {
-                return ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1;
-            }),
-        }
     }
+
+    // Set the current node as active
+    currentNode.current = true;
+    let existing = { [currentNode.url]: currentNode };
+
+    // Include the direct neighbors of the current node
+    let directNeighbors = new Set(currentNode.neighbors || []);
+    directNeighbors.forEach(neighbor => {
+        if (remaining[neighbor.url]) {
+            existing[neighbor.url] = remaining[neighbor.url];
+        }
+    });
+
+    // Filter out edges
+    let nodeIds = Object.keys(existing);
+    let filteredLinks = links.filter(link => 
+        nodeIds.includes(link.source) && nodeIds.includes(link.target)
+    );
+
+    // Return filtered nodes and links
+    return {
+        nodes: Object.values(existing),
+        links: filteredLinks
+    };
+}
+
 
     function getCssVar(variable) {return getComputedStyle(document.body).getPropertyValue(variable)}
 
