@@ -47,7 +47,7 @@
 
         // 过滤出仅显示当前节点与其邻居节点之间的连接关系
         let filteredLinks = links.filter(function (con) {
-            return (con.source === currentNode.id || con.target === currentNode.id);
+            return (con.source === currentNode.id || con.target === currentNode.id) || (ids.indexOf(con.source) > -1 && ids.indexOf(con.target) > -1);
         });
 
         return {
@@ -179,7 +179,7 @@
                     class: ["svg-icon"]
                 }
             });
-        return renderGraph(fullGraphData, "full-graph-container", 200, false);;
+        return renderGraph(fullGraphData, "full-graph-container", 200, false);
     }
 
     function closefullGraph(fullGraph) {
