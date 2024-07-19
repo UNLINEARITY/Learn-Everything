@@ -1,4 +1,4 @@
-<aside id="floating-control">
+/*<aside id="floating-control">
     <a id="donate" href="https://www.unlinearity.top/%E5%85%B3%E4%BA%8E%E8%AF%A5%E7%BD%91%E7%AB%99/">
         <i icon-name="heart" title="Donate or Sponsor" aria-hidden="true"></i>
     </a>
@@ -8,7 +8,76 @@
         <i class="svg-icon dark" icon-name="moon" title="Dark Mode" aria-hidden="true"></i>
         <i class="svg-icon auto" icon-name="sun-moon" title="Auto Mode" aria-hidden="true"></i>
     </span>
+</aside> */
+<aside id="floating-control">
+    <a id="donate" href="https://www.unlinearity.top/%E5%85%B3%E4%BA%8E%E8%AF%A5%E7%BD%91%E7%AB%99/" 
+       data-tooltip="Donate or Sponsor" data-tooltip-position="top">
+        <i icon-name="heart" aria-hidden="true"></i>
+    </a>
+    <a id="emailme" href="mailto:unlinearity@gmail.com?subject=Regarding {{title}}&body=Discussing {{meta.siteBaseUrl}}{{permalink}}" 
+       data-tooltip="Discuss" data-tooltip-position="top">
+        <i icon-name="mail-plus" aria-hidden="true"></i>
+    </a>
+    <span id="theme-switch">
+        <i class="svg-icon light" icon-name="sun" data-tooltip="Light Mode" data-tooltip-position="top" aria-hidden="true"></i>
+        <i class="svg-icon dark" icon-name="moon" data-tooltip="Dark Mode" data-tooltip-position="top" aria-hidden="true"></i>
+        <i class="svg-icon auto" icon-name="sun-moon" data-tooltip="Auto Mode" data-tooltip-position="top" aria-hidden="true"></i>
+    </span>
 </aside>
+
+<style>
+    [data-tooltip] {
+        position: relative;
+        cursor: pointer;
+    }
+
+    [data-tooltip]::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        white-space: nowrap;
+        padding: 4px 8px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 1000; /* 确保工具提示在其他元素之上 */
+    }
+
+    [data-tooltip][data-tooltip-position="top"]::after {
+        bottom: 100%; /* 工具提示在元素上方 */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 5px; /* 工具提示与元素之间的间距 */
+    }
+
+    [data-tooltip][data-tooltip-position="bottom"]::after {
+        top: 100%; /* 工具提示在元素下方 */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px; /* 工具提示与元素之间的间距 */
+    }
+
+    [data-tooltip][data-tooltip-position="left"]::after {
+        top: 50%;
+        right: 100%; /* 工具提示在元素左侧 */
+        transform: translateY(-50%);
+        margin-right: 5px; /* 工具提示与元素之间的间距 */
+    }
+
+    [data-tooltip][data-tooltip-position="right"]::after {
+        top: 50%;
+        left: 100%; /* 工具提示在元素右侧 */
+        transform: translateY(-50%);
+        margin-left: 5px; /* 工具提示与元素之间的间距 */
+    }
+
+    [data-tooltip]:hover::after {
+        opacity: 1;
+    }
+</style>
 
     
 <script>
