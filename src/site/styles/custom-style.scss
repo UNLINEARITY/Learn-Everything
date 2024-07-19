@@ -129,10 +129,10 @@ body {
   }
 
   nav.filetree-sidebar {
-    top: 65px;
+    top: 90px;
     left: 18px;
     position: fixed;
-    height: calc(100% - 100px);
+    height: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     border-radius: 10px;
