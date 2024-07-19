@@ -21,57 +21,36 @@
     }
 
     function filterLocalGraphData(graphData, depth) {
-    if (graphData == null) {
-        return null;
-    }
-
-    let remaining = JSON.parse(JSON.stringify(graphData.nodes));
-    let links = JSON.parse(JSON.stringify(graphData.links));
-    let currentLink = decodeURI(window.location.pathname);
-    let currentNode = remaining[currentLink] || Object.values(remaining).find((v) => v.home);
-    
-    if (!currentNode) {
-        return { nodes: [], links: [] }; // Handle case where currentNode is not found
-    }
-    
-    // Remove the current node from remaining nodes
-    delete remaining[currentNode.url];
-
-    // If the current node is not the home node, remove the home node from remaining nodes
-    if (!currentNode.home) {
-        let home = Object.values(remaining).find((v) => v.home);
-        if (home) {
+        if (graphData == null) {
+            return null;
+        }
+        let remaining = JSON.parse(JSON.stringify(graphData.nodes));
+        let links = JSON.parse(JSON.stringify(graphData.links));
+        let currentLink = decodeURI(window.location.pathname);
+        let currentNode = remaining[currentLink] || Object.values(remaining).find((v) => v.home);
+        delete remaining[currentNode.url];
+        if (!currentNode.home) {
+            let home = Object.values(remaining).find((v) => v.home);
             delete remaining[home.url];
         }
-    }
-
-
-    // Set the current node as active
-    currentNode.current = true;
-    let existing = { [currentNode.url]: currentNode };
-
-
-    // Include the direct neighbors of the current node
-    let directNeighbors = new Set(currentNode.neighbors || []);
-    directNeighbors.forEach(neighbor => {
-        if (remaining[neighbor.url]) {
-            existing[neighbor.url] = remaining[neighbor.url];
+        currentNode.current = true;
+        let existing = {};
+        existing[currentNode.url] = currentNode;
+        for (let i = 0; i < depth; i++) {
+            existing, remaining = getNextLevelNeighbours(existing, remaining);
         }
-    });
-
-    // Filter out edges
-    let nodeIds = Object.keys(existing);
-    let filteredLinks = links.filter(link => 
-        nodeIds.includes(link.source) && nodeIds.includes(link.target)
-    );
-
-    // Return filtered nodes and links
-    return {
-        nodes: Object.values(existing),
-        links: filteredLinks
-    };
-}
-
+        nodes = Object.values(existing);
+        if (!currentNode.home) {
+            nodes = nodes.filter(n => !n.home);
+        }
+        let ids = nodes.map((n) => n.id);
+        return {
+            nodes,
+            links: links.filter(function (con) {
+                return ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1;
+            }),
+        }
+    }
 
     function getCssVar(variable) {return getComputedStyle(document.body).getPropertyValue(variable)}
 
@@ -208,10 +187,10 @@
 </script>
 <div  x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
     <div class="graph-title-container">
-        <div class="graph-title">Connected Pages</div>
+        <div class="graph-title">关系图谱 Graph</div>
         <div id="graph-controls">
                 <div class="depth-control">
-                    <label for="graph-depth">Depth</label>
+                    <label for="graph-depth">联系深度 Depth</label>
                     <div class="slider">
                             <input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth"/>
                     <datalist id="depthmarkers">
