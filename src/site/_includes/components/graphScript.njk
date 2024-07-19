@@ -45,9 +45,11 @@
         }
     }
 
+
     // Set the current node as active
     currentNode.current = true;
     let existing = { [currentNode.url]: currentNode };
+
 
     // Include the direct neighbors of the current node
     let directNeighbors = new Set(currentNode.neighbors || []);
