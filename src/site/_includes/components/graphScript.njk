@@ -45,10 +45,9 @@
         }
         let ids = nodes.map((n) => n.id);
 
-        // 保留当前节点与其直接邻居节点之间的连接关系
+        // 仅保留与当前节点的直接连接
         let filteredLinks = links.filter(function (con) {
-            return (con.source === currentNode.id || con.target === currentNode.id) &&
-                   (ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1);
+            return (con.source === currentNode.id || con.target === currentNode.id);
         });
 
         return {
@@ -99,12 +98,11 @@
                 } else {
                     return mutedColor;
                 }
-                
             })
             .nodeCanvasObject((node, ctx) => {
                 const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
                 const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
-                
+
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
                 if (hoverNode == null) {
@@ -116,9 +114,9 @@
                         ctx.fillStyle = mutedColor;
                     }
                 }
-                 
+
                 ctx.fill();
-                
+
                 if (node.current) {
                     ctx.beginPath();
                     ctx.arc(node.x, node.y, nodeR + 1, 0, 2 * Math.PI, false);
@@ -146,11 +144,11 @@
                 }
                 hoverNode = node || null;
             });
-            if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
-                setTimeout(() => {
-                    Graph.zoomToFit(5, 75);
-                }, delay || 200);
-            }
+        if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
+            setTimeout(() => {
+                Graph.zoomToFit(5, 75);
+            }, delay || 200);
+        }
         return Graph;
     }
 
@@ -177,10 +175,10 @@
 
     function openFullGraph(fullGraphData) {
         lucide.createIcons({
-                attrs: {
-                    class: ["svg-icon"]
-                }
-            });
+            attrs: {
+                class: ["svg-icon"]
+            }
+        });
         return renderGraph(fullGraphData, "full-graph-container", 200, false);
     }
 
@@ -213,7 +211,7 @@
             </div>
         </div>
     </div>
-    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
+    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
     <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span>
         <div id="full-graph-container"></div>
