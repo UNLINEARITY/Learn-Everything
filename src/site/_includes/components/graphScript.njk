@@ -1,5 +1,5 @@
 <script>
-     async function fetchGraphData() {
+    async function fetchGraphData() {
         const graphData = await fetch('/graph.json').then(res => res.json());
         const fullGraphData  = filterFullGraphData(graphData);
         return {graphData, fullGraphData}
