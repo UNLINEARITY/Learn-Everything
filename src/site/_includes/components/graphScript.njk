@@ -44,21 +44,15 @@
             nodes = nodes.filter(n => !n.home);
         }
         let ids = nodes.map((n) => n.id);
-
-        // 过滤出仅显示当前节点与其邻居节点之间的连接关系
-        let filteredLinks = links.filter(function (con) {
-            return (con.source === currentNode.id || con.target === currentNode.id) || (ids.indexOf(con.source) > -1 && ids.indexOf(con.target) > -1);
-        });
-
         return {
             nodes,
-            links: filteredLinks
+            links: links.filter(function (con) {
+                return ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1;
+            }),
         }
     }
 
-    function getCssVar(variable) {
-        return getComputedStyle(document.body).getPropertyValue(variable);
-    }
+    function getCssVar(variable) {return getComputedStyle(document.body).getPropertyValue(variable)}
 
     function htmlDecode(input) {
         var doc = new DOMParser().parseFromString(input, "text/html");
@@ -98,11 +92,12 @@
                 } else {
                     return mutedColor;
                 }
+                
             })
             .nodeCanvasObject((node, ctx) => {
                 const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
                 const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
-
+                
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
                 if (hoverNode == null) {
@@ -114,9 +109,9 @@
                         ctx.fillStyle = mutedColor;
                     }
                 }
-
+                 
                 ctx.fill();
-
+                
                 if (node.current) {
                     ctx.beginPath();
                     ctx.arc(node.x, node.y, nodeR + 1, 0, 2 * Math.PI, false);
@@ -125,7 +120,7 @@
                     ctx.stroke();
                 }
 
-                const label = htmlDecode(node.title);
+                const label = htmlDecode(node.title)
                 const fontSize = 3.5;
                 ctx.font = `${fontSize}px Sans-Serif`;
 
@@ -139,21 +134,22 @@
             .onNodeHover(node => {
                 highlightNodes.clear();
                 if (node) {
-                    highlightNodes.add(node);
-                    node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
+                highlightNodes.add(node);
+                node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
                 }
                 hoverNode = node || null;
+                
             });
-        if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
-            setTimeout(() => {
-                Graph.zoomToFit(5, 75);
-            }, delay || 200);
-        }
+            if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
+                setTimeout(() => {
+                    Graph.zoomToFit(5, 75);
+                }, delay || 200);
+            }
         return Graph;
     }
 
     function renderLocalGraph(graphData, depth, fullScreen) {
-        if (window.graph) {
+        if (window.graph){
             window.graph._destructor();
         }
         const data = filterLocalGraphData(graphData, depth);
@@ -179,7 +175,7 @@
                     class: ["svg-icon"]
                 }
             });
-        return renderGraph(fullGraphData, "full-graph-container", 200, false);
+        return renderGraph(fullGraphData, "full-graph-container", 200, false);;
     }
 
     function closefullGraph(fullGraph) {
@@ -189,7 +185,7 @@
         return null;
     }
 </script>
-<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div  x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
     <div class="graph-title-container">
         <div class="graph-title">关系图谱-GraphView</div>
         <div id="graph-controls">
@@ -206,12 +202,12 @@
                     <span id="depth-display" x-text="depth"></span>
                 </div>
                 <div class="ctrl-right">
-                    <span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
-                    <span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+                    <span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i  icon-name="globe" aria-hidden="true"></i></span>
+                    <span  id="graph-fs-btn"  x-on:click="fullScreen = !fullScreen"><i  icon-name="expand" aria-hidden="true"></i></span>
                 </div>
         </div>
     </div>
-    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
+    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
     <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
         <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
     </div>
