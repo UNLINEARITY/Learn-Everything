@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-07-17T17:13:27.131+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-07-19T15:41:13.260+08:00"}
 ---
 
 ST-M-32
@@ -24,6 +24,7 @@ ST-M-32
 
 [[旋转编码器\|旋转编码器]]
 [[TIM\|TIM]]
+
 ### 芯片命名规则
 [[STM32F103C8T6\|STM32F103C8T6]]
 
