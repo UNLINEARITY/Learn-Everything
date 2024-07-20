@@ -675,11 +675,7 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
 
 .MathJax {
   overflow-x: auto; /* 允许水平滚动 */
-  white-space: nowrap; /* 防止换行 */
   max-width: 100%; /* 限制最大宽度 */
 }
 
-.MathJax pre {
-  display: inline-block; /* 使内部内容不换行 */
-}
 
