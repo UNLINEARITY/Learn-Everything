@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/EXTI.md","permalink":"/MCU微控制器/STM32/EXTI/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:52.272+08:00","updated":"2024-07-19T19:30:33.273+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/EXTI.md","permalink":"/MCU微控制器/STM32/EXTI/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:52.272+08:00","updated":"2024-07-19T21:21:01.536+08:00"}
 ---
 
 **Extern Interrupt**   外部中断
@@ -78,4 +78,15 @@ typedef enum
   EXTI_Trigger_Rising_Falling = 0x10
 }EXTITrigger_TypeDef;
 ```
+
+### 实际中断的配置流程
+
+配置 [[RCC\|RCC]]，将涉及到的外设的时钟都打开
+	EXTI、NVIC 外设时钟一直保持打开，无需开启
+- NVIC 属于内核外设，内核外设都不需要打开时钟
+- EXTI 虽然为单独的外设，但是由于诸多因素的考量以及电路上的设计，没有相应的时钟控制位，无需开启
+配置 [[GPIO\|GPIO]]，选择输入模式
+配置 [[AFIO\|AFIO]]，选择使用的 GPIO 连接到之后的 EXTI
+配置 [[EXTI\|EXTI]]，选择边沿触发方式（上升沿/下降沿/双边沿/软件触发），及触发响应方式（事件响应/中断响应）
+配置 [[NVIC\|NVIC]]，为中断选择合适的优先级
 

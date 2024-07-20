@@ -1,21 +1,15 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/NVIC.md","permalink":"/MCU微控制器/STM32/NVIC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:12.484+08:00","updated":"2024-07-19T19:30:17.102+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/NVIC.md","permalink":"/MCU微控制器/STM32/NVIC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:12.484+08:00","updated":"2024-07-19T21:16:41.970+08:00"}
 ---
 
 **Nested Vectored Interrupt Controller**
-**嵌套向量中断控制器**
-
-内核外设
+**嵌套向量中断控制器**  
+是 STM32 微控制器中用于管理中断、分配中断优先级的 [[STM32片上外设\|内核外设]]
+它负责处理来自内核和片上所有外设的**中断请求**，包括可屏蔽中断和非屏蔽中断
 
 
 中断向量表
 向量地址，相当于中断程序的跳板
-
-
-是 STM32 微控制器中用于管理中断的内核外设。它负责处理来自内核和片上所有外设的中断请求，包括可屏蔽中断和非屏蔽中断
-
-
-管理中断、分配优先级
 
 使用 NVIC 统一管理中断，每个中断通道都拥有 16 个可编程的优先等级，可对优先级进行分组，进一步设置抢占优先级和响应优先级
 
@@ -50,22 +44,20 @@ NVIC 的中断优先级由优先级寄存器的 4 位（0~15）决定，这 4 �
 |分组 4|4 位，取值为 0~15|0 位，取值为 0|
 
 ### misc. h
+（Miscellaneous Control Register  杂项控制位的寄存器）
 
-基本配置（一定要有的）
+
 
 ```C
+//**基本配置、通用配置**
+
 void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup);
 //中断分组,注意整个芯片只能使用一种分组方式
-//要么模块化编程时，所有分组一致；要么直接放在主程序，编译一次
-//无特殊要求或结构简单  NVIC_PriorityGroup可以随便取
+//要么模块化编程时，所有分组一致；要么直接放在主程序，编译一次。无特殊要求或结构简单  NVIC_PriorityGroup可以随便取
 
 void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct);//结构体初始化
-```
 
-
-
-特殊配置
-```C
+//**特殊配置**
 void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset);//设置中断向量表
 
 void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState);  //系统低功耗配置
@@ -73,17 +65,15 @@ void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState);  //系
 void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
 ```
 
-#### IRQn 
-nterrupt Request -n  中断请求的缩写，
-它代表了中断源的编号。STM32的中断系统允许多个中断源被管理，每个中断源都通过一个唯一的中断号（IRQn）来识别。
+
+**IRQn**     Interrupt Request -n  中断请求的缩写
+它代表了中断源的编号。STM32 的中断系统允许多个中断源被管理，每个中断源都通过一个唯一的中断号（IRQn）来识别。
 
 
-### startup_stm32f10x_md. s
-每个外设中断函数名称都是固定的
-在启动文件中查找
 
 
-### 具体实例
-[[GPIO#^4d936c\|GPIO]]
-[[TIM定时中断\|TIM定时中断]]
+
+
+
+
 

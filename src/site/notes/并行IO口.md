@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/51 单片机/并行IO口.md","permalink":"/MCU微控制器/51 单片机/并行IO口/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-06-09T21:52:54.268+08:00","updated":"2024-06-20T20:25:31.945+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/51 单片机/并行IO口.md","permalink":"/MCU微控制器/51 单片机/并行IO口/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-06-09T21:52:54.268+08:00","updated":"2024-07-19T21:00:49.974+08:00"}
 ---
 
 **Parallel I/O Ports**
@@ -42,7 +42,7 @@ MOV A,P0/1/2/3
 |                 |                 | 定时器 1的外部输入引脚 | 定时器0的外部输入引脚 | 外部中断1的输入引脚        | 外部中断 0的输入引脚       | 串行通信发送数据 | 串行通信接收数据 |
 
 [[内部定时计数器\|内部定时计数器]]
-[[中断系统\|外部中断]]   
+[[8051中断系统\|外部中断]]   
 [[串行通信\|串行通信]]
 
 

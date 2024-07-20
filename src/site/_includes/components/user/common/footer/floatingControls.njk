@@ -1,23 +1,24 @@
 <aside id="floating-control">
+    <a id="github" href="https://github.com/UNLINEARITY/Learn-Everything" data-tooltip="Star On Github" data-tooltip-position="top">
+        <i class="svg-icon" icon-name="star" aria-hidden="true"></i>
+    </a>
     <a id="donate" href="https://www.unlinearity.top/%E5%85%B3%E4%BA%8E%E8%AF%A5%E7%BD%91%E7%AB%99/%E6%94%AF%E6%8C%81%E6%9C%AC%E7%BD%91%E7%AB%99/" 
        data-tooltip="Donate or Sponsor" data-tooltip-position="top">
-        <i icon-name="heart" aria-hidden="true"></i>
+        <i class="svg-icon" icon-name="heart" aria-hidden="true"></i>
     </a>
     <a id="emailme" href="mailto:unlinearity@gmail.com?subject=Regarding {{title}}&body=Discussing {{meta.siteBaseUrl}}{{permalink}}" 
        data-tooltip="Discuss" data-tooltip-position="top">
-        <i icon-name="mail-plus" aria-hidden="true"></i>
+        <i class="svg-icon" icon-name="mail-plus" aria-hidden="true"></i>
     </a>
     <span id="theme-switch">
         <i class="svg-icon light" icon-name="sun" data-tooltip="Light Mode" data-tooltip-position="top" aria-hidden="true"></i>
         <i class="svg-icon dark" icon-name="moon" data-tooltip="Dark Mode" data-tooltip-position="top" aria-hidden="true"></i>
         <i class="svg-icon auto" icon-name="sun-moon" data-tooltip="Auto Mode" data-tooltip-position="top" aria-hidden="true"></i>
     </span>
-    <a id="github" href=https://github.com/UNLINEARITY/Learn-Everything" data-tooltip="Star" data-tooltip-position="top">
-        <i icon-name="star" aria-hidden="true"></i>
-    </a>
 </aside>
 
 <style>
+    /* 工具提示样式 */
     [data-tooltip] {
         position: relative;
         cursor: pointer;
@@ -69,7 +70,34 @@
     [data-tooltip]:hover::after {
         opacity: 1;
     }
+
+    /* 动画样式 */
+    .svg-icon {
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .svg-icon:hover {
+        animation: jelly 0.6s;
+        fill: #ff6347; /* 鼠标悬停时的填充颜色，可以根据需要修改 */
+    }
+
+    @keyframes jelly {
+        0%, 100% {
+            transform: scale(1, 1);
+        }
+        25% {
+            transform: scale(0.9, 1.1);
+        }
+        50% {
+            transform: scale(1.1, 0.9);
+        }
+        75% {
+            transform: scale(0.95, 1.05);
+        }
+    }
 </style>
+
 
     
 <script>
