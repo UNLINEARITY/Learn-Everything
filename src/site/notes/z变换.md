@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/z变换.md","permalink":"/自动控制原理/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-07-20T11:33:58.512+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/z变换.md","permalink":"/自动控制原理/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-07-20T13:33:10.055+08:00"}
 ---
 
 #Transform 
