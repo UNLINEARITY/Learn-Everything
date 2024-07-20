@@ -56,7 +56,6 @@ body {
 
     /* 40px/16=2.5em */
     img {
-      overflow-x: auto; /* 允许水平滚动 */
       height: 32px;
       width: auto;
     }
@@ -208,7 +207,6 @@ body {
       height: auto;
 
       img {
-        overflow-x: auto; /* 允许水平滚动 */
         width: 100%;
         height: auto;
       }
