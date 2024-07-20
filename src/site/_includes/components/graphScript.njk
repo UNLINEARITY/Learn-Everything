@@ -44,13 +44,19 @@
             nodes = nodes.filter(n => !n.home);
         }
         let ids = nodes.map((n) => n.id);
+    
+        // 记录所有源节点和目标节点
+        let validNodes = new Set(ids);
+    
         return {
             nodes,
             links: links.filter(function (con) {
-                return ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1;
+                // 只保留连接到源节点和目标节点之间的连接线
+                return validNodes.has(con.source) && validNodes.has(con.target);
             }),
-        }
+        };
     }
+
 
     function getCssVar(variable) {return getComputedStyle(document.body).getPropertyValue(variable)}
 
