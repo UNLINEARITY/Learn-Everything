@@ -56,6 +56,7 @@ body {
 
     /* 40px/16=2.5em */
     img {
+      overflow-x: auto; /* 允许水平滚动 */
       height: 32px;
       width: auto;
     }
@@ -207,6 +208,7 @@ body {
       height: auto;
 
       img {
+        overflow-x: auto; /* 允许水平滚动 */
         width: 100%;
         height: auto;
       }
@@ -677,7 +679,6 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
   overflow-x: auto; /* 允许水平滚动 */
   white-space: nowrap; /* 防止换行 */
   max-width: 100%; /* 限制最大宽度 */
-  padding: 10px; /* 给容器添加一些内边距，确保内容不紧贴边缘 */
 }
 
 .MathJax pre {
