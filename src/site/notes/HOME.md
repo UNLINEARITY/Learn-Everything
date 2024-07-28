@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-07-13T00:28:56.245+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-07-28T21:29:59.870+08:00"}
 ---
 
 
@@ -45,14 +45,13 @@ root((本网站))
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周
 
 ### 一、该网站的核心思想
+
 本网站的由来其实也不能完全说是一种巧合，更多的是源于一种**兴致的上升**，
 一种想要**传播基础知识的念头**，一个致力于**构建知识体系、惠及他人的想法**。
 
 本网站的内容将包括**基础的数理知识**，然后在此基础上深化，不断地与某些**特定的学科**集成
 
 期望通过构建**基础知识的网络**，不断地将看似 “毫无用处而枯燥”的数学知识与特定领域或现实世界结合起来
-
-
 
 
 ### 二、目录导航
@@ -69,6 +68,7 @@ root((本网站))
 [[电机及电力拖动\|电机及电力拖动]]
 [[51 单片机\|微机原理及其应用]]   8051 基础
 
+
 #### 2 . 即将完善
 [[微积分\|微积分]]
 [[线性代数\|线性代数]]
@@ -82,5 +82,4 @@ root((本网站))
 
 如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
 如果你有疑问，可以随时联系[[Unlinearity\|我]]
-
 
