@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/GPIO.md","permalink":"/MCU微控制器/STM32/GPIO/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-07-20T11:33:13.346+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/GPIO.md","permalink":"/MCU微控制器/STM32/GPIO/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-07-21T16:38:23.942+08:00"}
 ---
 
 **General Purpose Input Output** 
@@ -118,7 +118,6 @@ P-MOS N-MOS 都工作
 
 #### 开漏输出
 
-
 低电平有较强的驱动能力
 高电平无驱动能力
 
@@ -130,10 +129,10 @@ N-MOS 工作，P-MOS 断开
 也可设置 5V 的输出电平信号
 在 IO 引脚拉 5V 的高电平
 输出数据寄存器为 1 时，输出 5V
+
 #### 输出关闭
 P-MOS N-MOS 都无效
 端口的电平由外部信号控制
-
 
 ###  8 种输入输出模式
 
@@ -162,6 +161,7 @@ P-MOS N-MOS 都无效
 
 
 #### 开漏/推挽输出
+
 ![Pasted image 20240715171553.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240715171553.png)
 
 输出的引脚由输出数据寄存器控制
@@ -171,4 +171,5 @@ P-MOS N-MOS 都无效
 ![Pasted image 20240715171559.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240715171559.png)
 
 输出的引脚由[[STM32片上外设\|片上外设]] 控制
+
 
