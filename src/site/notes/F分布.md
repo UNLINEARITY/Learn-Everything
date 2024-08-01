@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"数学/数理统计/F分布.md","permalink":"/数学/数理统计/F分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-31T14:17:01.708+08:00","updated":"2024-06-15T12:57:17.047+08:00"}
+{"dg-publish":true,"dg-path":"数学/数理统计/F分布.md","permalink":"/数学/数理统计/F分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-31T14:17:01.708+08:00","updated":"2024-07-31T20:55:39.657+08:00"}
 ---
 
 $F\sim F(n_{1},n_{2})$
@@ -26,7 +26,7 @@ $$\begin{align}
 \end{align}$$
 
 
-主要用于[[方差分析\|方差分析]]和[[回归分析\|回归分析]]中的
+主要用于[[方差分析\|方差分析]]和[[线性回归\|回归分析]]中的
 
 转化表述，对立事件
 
