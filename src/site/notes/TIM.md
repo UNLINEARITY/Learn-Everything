@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/TIM.md","permalink":"/MCU微控制器/STM32/TIM/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-16T18:09:07.591+08:00","updated":"2024-07-25T17:28:51.914+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/TIM.md","permalink":"/MCU微控制器/STM32/TIM/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-16T18:09:07.591+08:00","updated":"2024-07-30T13:50:09.785+08:00"}
 ---
 
-**Timer**    定时器
+**Timer**    定时器 [[STM32片上外设\|STM32片上外设]]
 
 定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发[[STM32中断系统\|中断]]
 
@@ -160,11 +160,7 @@ CH1： TI1FP1、 CH2：TI2FP2
 输出：从模式控制器
 控制 CNT 计数器的计数时钟和计数方向
 
-
-
 读取正交编码器的输出波形，编码电机测速
-
-
 
 ### 三、高级定时器
 

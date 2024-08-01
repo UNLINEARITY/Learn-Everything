@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/GPIO.md","permalink":"/MCU微控制器/STM32/GPIO/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-07-21T16:38:23.942+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/GPIO.md","permalink":"/MCU微控制器/STM32/GPIO/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-08-01T13:03:47.861+08:00"}
 ---
 
 **General Purpose Input Output** 
@@ -153,10 +153,21 @@ P-MOS N-MOS 都无效
 ![Pasted image 20240715171532.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240715171532.png)
 
 输入模式下，输出功能无效
+
+
+>[!important] 注意
+>上拉、下拉模式的选择一般要参考接在该引脚的外部模块的默认输出电平（和外部默认状态保持一致）
+>外部模块默认输出高电平，则配置为上拉（大多数默认都为上拉）
+>外部模块默认输出低电平，则配置为下拉
+>如果不能确定外部输入的默认状态，或外部输出功率非常小，则可选用浮空输入
+>但是注意浮空输入没有默认电平，会受噪声影响跳变
+
+
 #### 模拟输入
 
 ![Pasted image 20240715171541.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240715171541.png)
 
+模拟输入模式下：GPIO 口无效，断开 GPIO 防止输入输出对模拟电压造成干扰
 [[ADC\|ADC]] 模数转换专属模式
 
 

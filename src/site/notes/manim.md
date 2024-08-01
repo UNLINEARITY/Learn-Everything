@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"工具/manim.md","permalink":"/工具/manim/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.867+08:00","updated":"2024-06-29T23:08:22.691+08:00"}
+{"dg-publish":true,"dg-path":"工具/manim.md","permalink":"/工具/manim/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.867+08:00","updated":"2024-07-30T12:52:36.702+08:00"}
 ---
 
 An animation engine for precise programmatic animations.   
@@ -13,12 +13,10 @@ An animation engine for precise programmatic animations.
 [[LaTex\|LaTex]]  书写数学公式  
 [[Opengl\|Opengl]] 交互性渲染
 
-
 -qp
 ```powershell
 manim -pql scene.py CreateCircle
 ```
-
 
 ```python  
 from manim import *
