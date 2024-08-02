@@ -1,9 +1,61 @@
 <script>
-    async function fetchGraphData() {
-        const graphData = await fetch('/graph.json').then(res => res.json());
-        const fullGraphData  = filterFullGraphData(graphData);
-        return {graphData, fullGraphData}
+const colorGroups = [
+    {
+        "query": "自动控制原理",
+        "color": {
+            "a": 1,
+            "rgb": 14701138
+        }
+    },
+    {
+        "query": "复变函数",
+        "color": {
+            "a": 1,
+            "rgb": 14725458
+        }
+    },
+    {
+        "query": "微积分",
+        "color": {
+            "a": 1,
+            "rgb": 11657298
+        }
+    },
+    {
+        "query": "概率论",
+        "color": {
+            "a": 1,
+            "rgb": 5431378
+        }
+    },
+    {
+        "query": "数理统计",
+        "color": {
+            "a": 1,
+            "rgb": 5431473
+        }
+    },
+    {
+        "query": "线性代数",
+        "color": {
+            "a": 1,
+            "rgb": 14701233
+        }
+    },
+    {
+        "query": "51单片机",
+        "color": {
+            "a": 1,
+            "rgb": 11621088
+        }
     }
+];
+
+    async function fetchGraphData() {
+    const graphData = await fetch('/graph.json').then(res => res.json());
+    const fullGraphData = filterFullGraphData(graphData);
+    return { graphData, fullGraphData, colorGroups };
+}
 
     function getNextLevelNeighbours(existing, remaining) {
         const keys = Object.values(existing).map((n) => n.neighbors).flat();
@@ -60,56 +112,67 @@
         return doc.documentElement.textContent;
     }
 
-    function renderGraph(graphData, id, delay, fullScreen) {
-        if (graphData == null) {
-            return;
+    function renderGraph(graphData, id, delay, fullScreen, colorGroups) {
+    if (graphData == null) {
+        return;
+    }
+    const el = document.getElementById(id);
+    const width = el.offsetWidth;
+    const height = el.offsetHeight;
+    const highlightNodes = new Set();
+    let hoverNode = null;
+    const defaultColor = getCssVar("--graph-main");
+    const mutedColor = getCssVar("--graph-muted");
+
+function getNodeColor(node) {
+        for (const group of colorGroups) {
+            if (node.title.includes(group.query)) {
+                return `#${group.color.rgb.toString(16).padStart(6, '0')}`;
+            }
         }
-        const el = document.getElementById(id);
-        width = el.offsetWidth;
-        height = el.offsetHeight;
-        const highlightNodes = new Set();
-        let hoverNode = null;
-        const color = getCssVar("--graph-main");
-        const mutedColor = getCssVar("--graph-muted");
-        let Graph = ForceGraph()
-        (el)
-            .graphData(graphData)
-            .nodeId('id')
-            .nodeLabel('title')
-            .linkSource('source')
-            .linkTarget('target')
-            .d3AlphaDecay(0.10)
-            .width(width)
-            .height(height)
-            .linkDirectionalArrowLength(2)
-            .linkDirectionalArrowRelPos(0.5)
-            .autoPauseRedraw(false)
-            .linkColor((link) => {
-                if (hoverNode == null) {
-                    return color;
-                }
-                if (link.source.id == hoverNode.id || link.target.id == hoverNode.id) {
-                    return color;
-                } else {
-                    return mutedColor;
-                }
-                
-            })
+        return defaultColor;
+    }
+
+
+        let Graph = ForceGraph()(el)
+        .graphData(graphData)
+        .nodeId('id')
+        .nodeLabel('title')
+        .linkSource('source')
+        .linkTarget('target')
+        .d3AlphaDecay(0.10)
+        .width(width)
+        .height(height)
+        .linkDirectionalArrowLength(2)
+        .linkDirectionalArrowRelPos(0.5)
+        .autoPauseRedraw(false)
+        .linkColor((link) => {
+            if (hoverNode == null) {
+                return defaultColor;
+            }
+            if (link.source.id == hoverNode.id || link.target.id == hoverNode.id) {
+                return defaultColor;
+            } else {
+                return mutedColor;
+            }
+        })
+
             .nodeCanvasObject((node, ctx) => {
-                const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
-                const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
-                
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
-                if (hoverNode == null) {
-                    ctx.fillStyle = color;
+            const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
+            const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
+            const nodeColor = getNodeColor(node);
+
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
+            if (hoverNode == null) {
+                ctx.fillStyle = nodeColor;
+            } else {
+                if (node == hoverNode || highlightNodes.has(node.url)) {
+                    ctx.fillStyle = nodeColor;
                 } else {
-                    if (node == hoverNode || highlightNodes.has(node.url)) {
-                        ctx.fillStyle = color;
-                    } else {
-                        ctx.fillStyle = mutedColor;
-                    }
+                    ctx.fillStyle = mutedColor;
                 }
+            }
                  
                 ctx.fill();
                 
@@ -186,30 +249,31 @@
         return null;
     }
 </script>
-<div  x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div x-init="{graphData, fullGraphData, colorGroups} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null, colorGroups: null }" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
     <div class="graph-title-container">
         <div class="graph-title">关系图谱 Graph</div>
         <div id="graph-controls">
-                <div class="depth-control">
-                    <label for="graph-depth">联系深度 Depth</label>
-                    <div class="slider">
-                            <input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth"/>
+            <div class="depth-control">
+                <label for="graph-depth">联系深度 Depth</label>
+                <div class="slider">
+                    <input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth" />
                     <datalist id="depthmarkers">
-                            <option value="1" label="1"></option>
-                            <option value="2" label="2"></option>
-                            <option value="3" label="3"></option>
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
                     </datalist>
-                    </div>
-                    <span id="depth-display" x-text="depth"></span>
                 </div>
-                <div class="ctrl-right">
-                    <span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i  icon-name="globe" aria-hidden="true"></i></span>
-                    <span  id="graph-fs-btn"  x-on:click="fullScreen = !fullScreen"><i  icon-name="expand" aria-hidden="true"></i></span>
-                </div>
+                <span id="depth-display" x-text="depth"></span>
+            </div>
+            <div class="ctrl-right">
+                <span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => { fullGraph = openFullGraph(fullGraphData, colorGroups) }, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+                <span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+            </div>
         </div>
     </div>
-    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
+    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen, colorGroups)" id="link-graph"></div>
     <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
-        <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+        <span id="full-graph-close" x-on:click="fullGraph = closeFullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span>
+        <div id="full-graph-container"></div>
     </div>
 </div>
