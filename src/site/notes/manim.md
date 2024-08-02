@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"工具/manim.md","permalink":"/工具/manim/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.867+08:00","updated":"2024-07-30T12:52:36.702+08:00"}
+{"dg-publish":true,"dg-path":"工具/manim.md","permalink":"/工具/manim/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.867+08:00","updated":"2024-08-02T18:32:21.561+08:00"}
 ---
 
 An animation engine for precise programmatic animations.   
@@ -67,10 +67,6 @@ manim -flag file.py classname
 
 `--format gif`   更改文件输出格式为 [[gif\|gif]]
 
-
-![DifferentRotations_ManimCE_v0.18.0.post0.gif](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/DifferentRotations_ManimCE_v0.18.0.post0.gif)
-
-
 ### Mobjects
 Mobject 类是所有其他 mobject 的抽象基类
 Mobjects are the basic building blocks for all manim animations.
@@ -116,6 +112,61 @@ self.play(FadeOut(square))
 ```python 
 self.play(square.animate.shift(UP), run_time=3)
 ```
+
+
+一个动画 animation 本质是函数/映射  
+特殊的函数：alpha_function 动画函数
+alpha 为动画的完成率，取值范围 0-1 
+alpha% 
+
+
+```C
+def Alpha_F(mobject,t):
+	x=f(t)
+	mobject.method(g(x))
+
+mob=mobject()
+self.add(mob)
+self.play(UpdateFromAlphaFunc(mob,Alpha_F,run_time=))
+```
+
+#### .animate  
+mobj. method () 通常返回一个 mobject ，不能作为参数传递到 play () 中
+可以使用 .animate  来传递，播放动画
+```python 
+self.play(mobj.animate.method())
+```
+
+但是注意. animate 实际上并不知道你需要什么动画，它只知道起始的状态和终止的状态，然后进行线性插值，不能实现点的实际运动
+
+例子：
+```python
+VGroup(s1,s2).arrange(Right,buff=1)
+self.add(s1,s2)
+self.play(s1.animate.rotate(PI),Rotate(s2,PI),run_time=2)
+```
+
+![DifferentRotations_ManimCE_v0.18.0.post0.gif](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/DifferentRotations_ManimCE_v0.18.0.post0.gif)
+
+#### 自定义动画
+从 Animation 类中继承，重载函数
+与库中已经实现的函数比较
+
+```python 
+begin()
+interpolate_mobject(alpha)
+interpolate_submobject(sub,sub_start,alpha)
+finish()
+clean_up_from_scene(scene)
+```
+
+
+### Update Function 
+
+Mobject can be made dependent on other mobjects 
+Mobject update   /  Scene update 
+
+
 
 
 ### LaTeX 渲染 
