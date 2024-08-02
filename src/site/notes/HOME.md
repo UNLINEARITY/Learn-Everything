@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-07-28T21:29:59.870+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-02T19:41:06.719+08:00"}
 ---
 
 
@@ -66,8 +66,7 @@ root((本网站))
 [[复变函数与积分变换\|复变函数与积分变换]]
 [[技术经济与工程管理\|技术经济与工程管理]]
 [[电机及电力拖动\|电机及电力拖动]]
-[[51 单片机\|微机原理及其应用]]   8051 基础
-
+[[微控制器\|微控制器]]
 
 #### 2 . 即将完善
 [[微积分\|微积分]]
@@ -76,10 +75,8 @@ root((本网站))
 [[模拟电路\|模拟电路]]
 [[物理\|物理]]
 [[计算机\|计算机]]
-[[数学建模\|数学建模]]
 
 ### 关于网站
-
 如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
 如果你有疑问，可以随时联系[[Unlinearity\|我]]
 
