@@ -1,9 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"计算机/CPU.md","permalink":"/计算机/CPU/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.732+08:00","updated":"2024-07-22T18:19:20.038+08:00"}
+{"dg-publish":true,"dg-path":"计算机/CPU.md","permalink":"/计算机/CPU/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.732+08:00","updated":"2024-08-04T17:34:14.292+08:00"}
 ---
 
-**Central Processing Unit**
-**中央处理单元**
+**Central Processing Unit**    **中央处理单元**
 包含**运算器**和**控制器**
 
 Inter 4004 被认为是 CPU 发展史的开端
