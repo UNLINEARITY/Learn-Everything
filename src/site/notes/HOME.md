@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-02T19:41:06.719+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-05T22:58:47.639+08:00"}
 ---
 
 
@@ -63,7 +63,7 @@ root((本网站))
 [[自动控制原理\|自动控制原理]]  
 [[概率论\|概率论]]
 [[数理统计\|数理统计]]
-[[复变函数与积分变换\|复变函数与积分变换]]
+[[复变函数\|复变函数]]
 [[技术经济与工程管理\|技术经济与工程管理]]
 [[电机及电力拖动\|电机及电力拖动]]
 [[微控制器\|微控制器]]
