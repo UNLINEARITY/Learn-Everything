@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/NVIC.md","permalink":"/MCU微控制器/STM32/NVIC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:12.484+08:00","updated":"2024-07-19T21:16:41.970+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/NVIC.md","permalink":"/MCU微控制器/STM32/NVIC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:12.484+08:00","updated":"2024-08-05T13:41:05.202+08:00"}
 ---
 
 **Nested Vectored Interrupt Controller**
@@ -68,6 +68,39 @@ void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
 
 **IRQn**     Interrupt Request -n  中断请求的缩写
 它代表了中断源的编号。STM32 的中断系统允许多个中断源被管理，每个中断源都通过一个唯一的中断号（IRQn）来识别。
+
+
+
+
+### 中断
+[[中断\|中断]]
+### 配置中断通用流程
+先配置 EXTI、TIM、ADC、USART、SPI、I2C、RTC 等多个外设
+最后外部中断信号通过 NVIC 进入到 CPU 中
+CPU 受到中断信号，跳转到中断函数中执行中断程序
+
+### 中断函数
+每个外设中断函数名称都是固定的 
+在启动文件 `tartup_stm32f10x_md. s` 中查找
+
+模块化编程在 `.C` 中设置中断函数
+在 `.h` 文件中无需额外声明（系统自动调用）
+
+一般中断函数中，都有中断标志位的判断
+注意判断完标志位，执行中断函数中的操作时，要清除标志位
+
+### 中断编程建议
+在中断函数里，不要编写耗时过长的代码
+中断函数要简短迅速（处理突发事件）
+
+最好不要在中断函数和主函数调用相同的函数
+或者操作同一个硬件
+
+可以使用变量或者标志位作为接口，减少代码之间耦合性，让部分代码相互独立
+
+### 实际例子
+[[EXTI\|EXTI]]
+[[TIM 定时中断\|TIM 定时中断]]
 
 
 

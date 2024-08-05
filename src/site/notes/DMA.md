@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-05T01:24:30.896+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-05T15:57:45.323+08:00"}
 ---
 
 **Direct Memory Access**     直接[[存储器\|存储器]]存取
@@ -19,18 +19,11 @@ STM32 可拥有 12 个独立可配置的通道
 >
 
 
-| 类型  | 起始地址        | 存储器        | 用途                  |
-| --- | ----------- | ---------- | ------------------- |
-| ROM | 0x0800 0000 | 程序存储器Flash | 存储C语言编译后的程序代码       |
-|     | 0x1FFF F000 | 系统存储器      | 存储BootLoader，用于串口下载 |
-|     | 0x1FFF F800 | 选项字节       | 存储一些独立于程序代码的配置参数    |
-| RAM | 0x2000 0000 | 运行内存SRAM   | 存储运行过程中的临时变量        |
-|     | 0x4000 0000 | 外设寄存器      | 存储各个外设的配置参数         |
-|     | 0xE000 0000 | 内核外设寄存器    | 存储内核各个外设的配置参数       |
+
+
+
 
 ### 框图
-
-
 
 ![Pasted image 20240804175209.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240804175209.png)
 
@@ -96,7 +89,6 @@ CPU 通过此来对 DMA 进行配置
 注意在开关控制 DISABLE 时要对传输计数器写值，再打开
 不能在 DMA 开启的时候对传输计数器写值
 
-
 ![Pasted image 20240805011104.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240805011104.png)
 
 ### DMA 使用
@@ -106,6 +98,30 @@ CPU 通过此来对 DMA 进行配置
 - 外设地址不自增
 - 存储器地址自增
 
+### 配置流程
+[[RCC\|RCC]] 开启时钟
+DMA 初始化
+开关控制使能
+
+```C 
+void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx);
+void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct);
+void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct);
+void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState);
+void DMA_ITConfig(DMA_Channel_TypeDef* DMAy_Channelx, uint32_t DMA_IT, FunctionalState NewState);
+
+
+
+void DMA_SetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx, uint16_t DataNumber); //给传输计数器写入数据
+
+uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx);//DMA获取当前数据寄存器，返回传输计数器的值
+
+
+FlagStatus DMA_GetFlagStatus(uint32_t DMAy_FLAG);//获取标志位状态
+void DMA_ClearFlag(uint32_t DMAy_FLAG);//清除标志位
+ITStatus DMA_GetITStatus(uint32_t DMAy_IT);//获取中断状态
+void DMA_ClearITPendingBit(uint32_t DMAy_IT);//清除中断挂起位
+```
 
 
 
