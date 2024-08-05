@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-05T22:58:47.639+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-06T02:11:33.849+08:00"}
 ---
 
 
@@ -66,15 +66,16 @@ root((本网站))
 [[复变函数\|复变函数]]
 [[技术经济与工程管理\|技术经济与工程管理]]
 [[电机及电力拖动\|电机及电力拖动]]
-[[微控制器\|微控制器]]
+[[微控制器\|微控制器]]   8051 部分
 
 #### 2 . 即将完善
+[[变换\|变换]]
 [[微积分\|微积分]]
 [[线性代数\|线性代数]]
 [[数字电路\|数字电路]]
 [[模拟电路\|模拟电路]]
 [[物理\|物理]]
-[[计算机\|计算机]]
+[[微控制器\|微控制器]]   STM32 部分
 
 ### 关于网站
 如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
