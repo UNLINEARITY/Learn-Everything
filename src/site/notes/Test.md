@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"test.md","permalink":"/test/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-06T15:03:28.496+08:00","updated":"2024-08-06T13:00:23.657+08:00"}
+{"dg-publish":true,"dg-path":"test.md","dg-hide-in-graph":true,"permalink":"/test/","hideInGraph":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-06T15:03:28.496+08:00","updated":"2024-08-06T13:06:48.633+08:00"}
 ---
 
 
