@@ -1,8 +1,6 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-08-06T12:32:31.579+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-08-06T16:57:09.487+08:00"}
 ---
-
-#Subject 
 
 ST-M-32
 - ST：公司

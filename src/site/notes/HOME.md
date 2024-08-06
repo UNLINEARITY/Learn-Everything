@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-06T02:11:33.849+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-06T16:58:42.353+08:00"}
 ---
 
 
@@ -52,8 +52,6 @@ root((本网站))
 本网站的内容将包括**基础的数理知识**，然后在此基础上深化，不断地与某些**特定的学科**集成
 
 期望通过构建**基础知识的网络**，不断地将看似 “毫无用处而枯燥”的数学知识与特定领域或现实世界结合起来
-
-
 ### 二、目录导航
 
 >“一切高级数学，归根结底都是**微积分**和**线性代数**的各种变化”
