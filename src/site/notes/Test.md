@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"test.md","dg-hide-in-graph":true,"permalink":"/test/","hideInGraph":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-06T15:03:28.496+08:00","updated":"2024-08-06T13:06:48.633+08:00"}
+{"dg-publish":true,"dg-path":"test.md","dg-hide-in-graph":true,"permalink":"/test/","hideInGraph":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-06T15:03:28.496+08:00","updated":"2024-08-06T13:32:46.783+08:00"}
 ---
 
 
@@ -52,11 +52,16 @@ root((本网站))
 ```
 
 
-| File              | tags                      |
-| ----------------- | ------------------------- |
-| [[特殊标签\|特殊标签]] | <ul><li>Subject</li></ul> |
+| File | tags |
+| ---- | ---- |
 
 { .block-language-dataview}
+
+
+
+![](https://www.youtube.com/watch?v=eKVgFQ6OgJQ)
+
+![](https://www.youtube.com/watch?v=NnTvZWp5Q7o)
 
 
 
