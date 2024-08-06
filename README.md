@@ -38,8 +38,6 @@ However, there are too many concepts. We might be amazed for a while, or be infl
 
 该项目旨在构建以**双向链接**和**关系图谱**为核心的知识库
 
-<p align='center'><img src='https://github.com/UNLINEARITY/Learn-Everything/blob/main/pictures/%E5%A4%A7%E4%BD%93%E4%BB%8B%E7%BB%8D.svg' width=90%></p>  
-
 强调知识与知识之间的联系，注重数理基础，深入探讨数学与物理知识在各个领域的作用与影响
 
 - 主体文件为Markdown(即.md文件)
