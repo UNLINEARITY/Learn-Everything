@@ -668,8 +668,10 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
     max-height: unset;
 
     @media (max-width: 1400px) {
+
       max-height: 320px;  /* 在小屏幕时限制大纲的高度 */
       overflow-y: auto;  /* 使大纲在小屏幕上可滚动 */
+
     }
   }
 
