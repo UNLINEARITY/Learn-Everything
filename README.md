@@ -1,7 +1,7 @@
 # Learn Everything!
 This is a project based on Obsidian + Digital Garden + Vercel
 
-<p align='center'><img src='src/SVGViewer (45).svg' width=60%></p>
+<p align='center'><img src='src/Logo.svg' width=60%></p>
 
 你可以访问这个[网站](https://www.unlinearity.top),看看所搭建成果!   
 
