@@ -1,0 +1,79 @@
+{%- if dgSlider -%}
+    <script src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <link rel="stylesheet"
+          href="https://unpkg.com/@glidejs/glide/dist/css/glide.core.min.css">
+    <script type="text/javascript">
+        let sliderContent = document.querySelector('main').cloneNode(true);
+        let header = sliderContent.querySelector('header').cloneNode(true);
+            sliderContent.removeChild(sliderContent.querySelector('header'));
+        // split content by <hr> tags
+        let slides = sliderContent.innerHTML.split('<hr>').map((content) => {
+            console.log(content);
+            const slide = document.createElement('div');
+            slide.innerHTML = content;
+            slide.classList.add('slide-container');
+            console.log(slide.querySelector(':scope > :first-child').style.cssText);
+            slide.style.cssText = slide.querySelector(':scope > :first-child').style.cssText;
+            slide.querySelector(':scope > :first-child').style.cssText = '';
+            const slideContainer = document.createElement('div');
+
+            slideContainer.classList.add('glide__slide');
+            slideContainer.appendChild(slide);
+            return slideContainer;
+        });
+        let slider = document.createElement('div');
+            slider.classList.add('glide__slides');
+            slider.append(...slides);
+        let glideContainer = document.createElement('div');
+            glideContainer.classList.add('glide');
+            glideContainer.innerHTML = `<div class="glide__track" data-glide-el="track"></div> <div class="slider-controls" data-glide-el="controls">
+        <button data-glide-dir="<"><i class="svg-icon" icon-name="chevron-left" aria-hidden="true"></i></button>
+        <button data-glide-dir=">"><i class="svg-icon" icon-name="chevron-right" aria-hidden="true"></i></button>
+      </div>`;
+            glideContainer.querySelector('.glide__track').appendChild(slider);
+        document.querySelector('main').innerHTML = '';
+        document.querySelector('main').appendChild(header);
+        document.querySelector('main').appendChild(glideContainer);
+        
+
+  new Glide('.glide', {
+  type: 'carousel',
+  startAt: 0,
+  perView: 1
+  }).mount()
+lucide.createIcons({
+                attrs: {
+                    class: ["svg-icon"]
+                }
+            });
+    </script>
+    <style type="text/css">
+        .slide-container {
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            color: black;
+            position: relative;
+        }
+        .slide-container > .human-date {
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            font-size: 0.7rem !important;
+        }
+        .slider-controls {
+            position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  transform: translateY(-50%);
+  opacity: 0.5;
+
+        }
+    </style>
+{%- endif -%}
