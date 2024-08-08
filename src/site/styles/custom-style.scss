@@ -660,11 +660,18 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
 }
 
 .sidebar {
+  /* 设置侧边栏本身的滚动条，确保其不会影响到主页面的滚动条 */
+  max-height: 100vh;  /* 让侧边栏高度不会超出视口 */
+  overflow-y: auto;  /* 侧边栏内容超过时启用垂直滚动条 */
+
   .toc-container {
     max-height: unset;
 
     @media (max-width: 1400px) {
-      max-height: 320px;
+
+      max-height: 320px;  /* 在小屏幕时限制大纲的高度 */
+      overflow-y: auto;  /* 使大纲在小屏幕上可滚动 */
+
     }
   }
 
@@ -673,6 +680,7 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
 
     @media (max-width: 1400px) {
       order: 3;
+      overflow-y: auto;  /* 使反向链接在小屏幕上可滚动 */
     }
   }
 }
