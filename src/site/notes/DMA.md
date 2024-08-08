@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-05T15:57:45.323+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-08T23:39:53.548+08:00"}
 ---
 
 **Direct Memory Access**     直接[[存储器\|存储器]]存取
@@ -89,7 +89,7 @@ CPU 通过此来对 DMA 进行配置
 注意在开关控制 DISABLE 时要对传输计数器写值，再打开
 不能在 DMA 开启的时候对传输计数器写值
 
-![Pasted image 20240805011104.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240805011104.png)
+![DMA1映像.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/DMA1%E6%98%A0%E5%83%8F.png)
 
 ### DMA 使用
 ![Pasted image 20240805011737.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240805011737.png)
