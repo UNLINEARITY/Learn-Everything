@@ -117,7 +117,6 @@ body {
   .sidebar-container {
     &>div:not(.graph) {
       width: 320px;
-      right: 20px;
       max-height: 365px;
       overflow-y: auto;
       
@@ -677,6 +676,10 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
       order: 3;
     }
   }
+}
+
+.sidebar {
+  right:20px;
 }
 
 .MathJax {
