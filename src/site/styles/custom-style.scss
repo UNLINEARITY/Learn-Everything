@@ -678,6 +678,10 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
   }
 }
 
+.sidebar {
+  right:20px;
+}
+
 .MathJax {
   overflow-x: auto; /* 允许水平滚动 */
   max-width: 100%; /* 限制最大宽度 */
