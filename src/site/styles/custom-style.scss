@@ -117,7 +117,6 @@ body {
   .sidebar-container {
     &>div:not(.graph) {
       width: 320px;
-      right: 20px;
       max-height: 365px;
       overflow-y: auto;
       
