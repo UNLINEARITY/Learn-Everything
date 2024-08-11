@@ -1,12 +1,11 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/NVIC.md","permalink":"/MCU微控制器/STM32/NVIC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:12.484+08:00","updated":"2024-08-05T13:41:05.202+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/NVIC.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/NVIC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-17T00:16:12.484+08:00","updated":"2024-08-11T17:04:38.126+08:00"}
 ---
 
 **Nested Vectored Interrupt Controller**
 **嵌套向量中断控制器**  
 是 STM32 微控制器中用于管理中断、分配中断优先级的 [[STM32片上外设\|内核外设]]
 它负责处理来自内核和片上所有外设的**中断请求**，包括可屏蔽中断和非屏蔽中断
-
 
 中断向量表
 向量地址，相当于中断程序的跳板

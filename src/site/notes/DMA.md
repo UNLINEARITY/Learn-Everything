@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-08T23:39:53.548+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-11T17:25:43.909+08:00"}
 ---
 
 **Direct Memory Access**     直接[[存储器\|存储器]]存取
