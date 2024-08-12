@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-11T17:25:43.909+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/DMA.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/DMA/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T00:29:54.803+08:00","updated":"2024-08-12T12:22:26.649+08:00"}
 ---
 
-**Direct Memory Access**     直接[[存储器\|存储器]]存取
+(terminology::**Direct Memory Access**)     直接[[存储器\|存储器]]存取
 DMA 可以提供**外设和存储器**或者**存储器和存储器**之间的高速数据传输
 协助 [[CPU\|CPU]]实现数据转运（无须 CPU 干预，节省了 CPU 的资源）
 
