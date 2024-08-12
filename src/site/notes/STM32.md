@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-08-06T16:57:09.487+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-08-12T13:47:08.994+08:00"}
 ---
 
 ST-M-32
@@ -13,6 +13,7 @@ ST-M-32
 [[STM32-C\|STM32-C]]
 [[STM32片上外设\|STM32片上外设]]
 [[STM32中断系统\|STM32中断系统]]
+[[STM32程序设计\|STM32程序设计]]
 
 ### 开发方式
 - 基于[[寄存器\|寄存器]]：偏底层

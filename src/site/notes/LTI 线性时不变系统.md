@@ -1,9 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-07-11T01:49:23.622+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","aliases":["线性定常系统"],"permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-08-12T13:42:23.491+08:00"}
 ---
 
-**LTI system**     **linear  time invariant**
-线性定常系统
+**LTI system**     (terminology::**Linear  Time Invariant**)
 
 ***线性*** ：
 

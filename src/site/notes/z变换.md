@@ -1,10 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/z变换.md","permalink":"/自动控制原理/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-07-20T13:33:10.055+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/z变换.md","tags":["Transform","Discrete"],"permalink":"/自动控制原理/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-08-12T13:42:58.057+08:00"}
 ---
 
-#Transform 
-
-**Z-Transform**
+(terminology::**Z-Transform**)
 **离散时间信号处理**中的一个重要数学工具，
 由连续时间信号处理中的[[拉普拉斯变换\|拉普拉斯变换]]引申出来的变换方法
 
