@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-15T17:45:53.665+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-15T23:05:59.201+08:00"}
 ---
 
 
@@ -63,7 +63,7 @@ root((本网站))
 [[数理统计\|数理统计]]
 [[复变函数\|复变函数]]
 [[电机及电力拖动\|电机及电力拖动]]
-[[51 单片机\|51 单片机]]
+[[51 单片机\|51 单片机]]（基础部分）
 [[技术经济与工程管理\|技术经济与工程管理]]
 
 #### 2 . 即将完善
@@ -72,7 +72,7 @@ root((本网站))
 [[线性代数\|线性代数]]
 [[数字电路\|数字电路]]
 [[物理\|物理]]
-[[数字电路\|数字电路]]
+[[STM32\|STM32]]（基础部分）
 
 ### 关于网站
 有关网站的其他信息查看[[关于该网站\|关于该网站]]
