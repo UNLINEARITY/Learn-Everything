@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-13T22:47:00.632+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-15T17:18:27.040+08:00"}
 ---
 
 
@@ -67,27 +67,22 @@ root((本网站))
 > 目前上传的文件可见：[[网站内容索引\|网站内容索引]]
 > 也可展开左侧文件树
 
-#### 1. 较为完善
-[[自动控制原理\|自动控制原理]]  
-[[概率论\|概率论]]
-[[数理统计\|数理统计]]
-[[复变函数\|复变函数]]
-[[技术经济与工程管理\|技术经济与工程管理]]
-[[电机及电力拖动\|电机及电力拖动]]
-[[微控制器\|微控制器]]   8051 部分
-#### 2 . 即将完善
-[[变换\|变换]]
-[[微积分\|微积分]]
-[[线性代数\|线性代数]]
-[[数字电路\|数字电路]]
-[[模拟电路\|模拟电路]]
-[[物理\|物理]]
-[[微控制器\|微控制器]]   STM32 部分
+| 较为完善          | 即将完善      |     |
+| ------------- | --------- | --- |
+| [[自动控制原理\|自动控制原理]]    | [[变换\|变换]]    |     |
+| [[概率论\|概率论]]       | [[微积分\|微积分]]   |     |
+| [[数理统计\|数理统计]]      | [[线性代数\|线性代数]]  |     |
+| [[复变函数\|复变函数]]      | [[数字电路\|数字电路]]  |     |
+| [[技术经济与工程管理\|技术经济与工程管理]] | [[模拟电路\|模拟电路]]  |     |
+| [[电机及电力拖动\|电机及电力拖动]]   | [[物理\|物理]]    |     |
+| [[微控制器\|微控制器]]      | [[微控制器\|微控制器]]  |     |
+
+
 
 ### 关于网站
-如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
-如果你有疑问，可以随时联系[[Unlinearity\|我]]
+如果你有疑问可以随时联系[[Unlinearity\|我]]
 有关网站的其他信息查看[[关于该网站\|关于该网站]]
+如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
 
 I'm grateful to **Obsidian** and the open-source plugin **Digital Garden**, which have enabled my knowledge network to be presented to the public.
 
