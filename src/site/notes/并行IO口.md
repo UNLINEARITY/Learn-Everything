@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/51 单片机/并行IO口.md","permalink":"/MCU微控制器/51 单片机/并行IO口/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-06-09T21:52:54.268+08:00","updated":"2024-08-06T19:05:44.341+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/51 单片机/并行IO口.md","permalink":"/MCU微控制器/51 单片机/并行IO口/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-06-09T21:52:54.268+08:00","updated":"2024-08-15T22:09:46.496+08:00"}
 ---
 
-**Parallel I/O Ports**
+(terminology::**Parallel I/O Ports**)
 MCS-51系列单片机有4个8位并行I/O端口,称为P0、P1、P2、P3
 每个端口都是准双向口，
 都包括一个[[锁存器\|锁存器]]、一个输出驱动器和一个输入缓冲器
