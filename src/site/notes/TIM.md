@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/TIM.md","permalink":"/MCU微控制器/STM32/TIM/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-16T18:09:07.591+08:00","updated":"2024-07-30T13:50:09.785+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/TIM.md","permalink":"/MCU微控制器/STM32/TIM/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-16T18:09:07.591+08:00","updated":"2024-08-17T19:16:23.813+08:00"}
 ---
 
 **Timer**    定时器 [[STM32片上外设\|STM32片上外设]]
@@ -176,6 +176,8 @@ CH1： TI1FP1、 CH2：TI2FP2
 原来的输出通过输出控制模块，变为两个互补的输出
 可以生成两路互补的 PWM 波形，为驱动[[无刷电机\|三相无刷电机]]
 
+可以用来用于驱动外部[[推挽电路\|推挽电路]]
+
 注意只有前三路发生改变（作为互补输出）
 原因是三相无刷电机的驱动电路只需要三路桥臂
 
@@ -189,9 +191,6 @@ CH1： TI1FP1、 CH2：TI2FP2
 	刹车输入中，一旦 CSS 检测到外部时钟失效，通过或门反映到输出比较
 
 控制电路会自动切断电机的输出，防止意外发生
-
-
-
 
 
 

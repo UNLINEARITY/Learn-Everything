@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/GPIO.md","permalink":"/MCU微控制器/STM32/GPIO/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-08-01T13:03:47.861+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/GPIO.md","permalink":"/MCU微控制器/STM32/GPIO/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-08-18T12:40:24.442+08:00"}
 ---
 
-**General Purpose Input Output** 
+(terminology::**General Purpose Input Output** )
 通用输入输出口
 引脚电平：0V~3.3V    
 部分 FT  Five Tolerate 可容忍 5V
@@ -145,7 +145,7 @@ P-MOS N-MOS 都无效
 | 开漏输出   | OUT_OD (Out Open Drain) | 数字输出 | 可输出引脚电平，高电平为高阻态，低电平接VSS   |
 | 推挽输出   | OUT_PP (Out Push Pull)  | 数字输出 | 可输出引脚电平，高电平接VDD，低电平接VSS   |
 | 复用开漏输出 | AF_OD                   | 数字输出 | 由片上外设控制，高电平为高阻态，低电平接VSS   |
-| 复用推挽输出 | AD_PP                   | 数字输出 | 由片上外设控制，高电平接VDD，低电平接VSS   |
+| 复用推挽输出 | AF_PP                   | 数字输出 | 由片上外设控制，高电平接VDD，低电平接VSS   |
 |        |                         |      |                           |
 
 #### 浮空/上拉/下拉输入
@@ -175,12 +175,12 @@ P-MOS N-MOS 都无效
 
 ![Pasted image 20240715171553.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240715171553.png)
 
-输出的引脚由输出数据寄存器控制
+输出的引脚由**输出数据寄存器控制**
 
 #### 复用开漏/推挽输出
 
 ![Pasted image 20240715171559.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240715171559.png)
 
-输出的引脚由[[STM32片上外设\|片上外设]] 控制
+输出的引脚由[[STM32片上外设\|片上外设]]控制
 
 
