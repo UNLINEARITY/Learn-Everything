@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","aliases":["线性定常系统"],"permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-08-12T13:42:23.491+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/LTI 线性时不变系统.md","aliases":["线性定常系统"],"permalink":"/自动控制原理/LTI 线性时不变系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.256+08:00","updated":"2024-08-18T18:35:01.118+08:00"}
 ---
 
 **LTI system**     (terminology::**Linear  Time Invariant**)
 
-***线性*** ：
+**线性** ：
 
 $$\begin{align} 
 o\{\alpha f_{1}(t)\}&=\alpha x_{1}(t) \\
@@ -17,7 +17,7 @@ o\{\alpha_{1} f_{1}(t)+\alpha_{2} f_{2}(t)\}&=\alpha_{1}x_{1}(t)+\alpha_{2}x_{2}
 - 两个外作用同时加于系统所产生的总输出，等于各个外作用单独作用时分别产生的输出之和
 - 外作用的数值增大若干倍时，输出相应增大同样的倍数
 
-***时不变***：
+**时不变**：
 
 $$\begin{align}
  o\{ f(t)\}&=x(t)\\
@@ -34,4 +34,6 @@ o\{ f(t-\tau)\}&=x(t-\tau)
 
 具体系统：
 [[电路分析\|电路分析]]
+
+[[线性定常连续系统的解\|线性定常连续系统的解]]
 
