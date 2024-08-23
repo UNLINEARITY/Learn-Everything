@@ -1,6 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-08-15T22:21:16.486+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-08-23T13:09:06.676+08:00"}
 ---
+
+(terminology::**STM32 MCU**)
 
 基于 [[ARM\|ARM]]  Cortex-M 开发的 32 位的[[微控制器\|微控制器]]
 
