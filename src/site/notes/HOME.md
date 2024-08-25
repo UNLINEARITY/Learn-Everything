@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-24T00:23:45.399+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/HOME/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-25T19:01:26.671+08:00"}
 ---
 
 
@@ -44,6 +44,8 @@ root((本网站))
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周
 >"How can one be self-important when they have seen so little?"--"Autumn Floods," Zhuang Zhou
 
+==~~测试一下能不能看到~~==
+
 ### 一、该网站的核心思想
 本网站的由来其实也不能完全说是一种巧合，更多的是源于一种兴致的上升，
 一种想要传播基础知识的念头，一个致力于构建知识体系、惠及他人的想法。
@@ -79,4 +81,7 @@ root((本网站))
 如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
 
 I'm grateful to **Obsidian** and the open-source plugin **Digital Garden**, which have enabled my knowledge network to be presented to the public.
+
+
+
 
