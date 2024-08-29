@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-29T22:22:50.391+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-29T23:35:55.163+08:00"}
 ---
 
 
@@ -54,11 +54,11 @@ root((本网站))
 > 目前上传的文件可见：[[网站内容索引\|网站内容索引]]，也可展开左侧文件树看所有的文件
 > 如果第一次接触此类型的网站，见[[该网站的基本使用\|该网站的基本使用]]
 
+
 ### 二、目录导航
 >“一切高级数学，归根结底都是**微积分**和**线性代数**的各种变化”
 >——丘成桐
 #### 1. 较为完善
-[[变换\|变换]]
 [[自动控制原理\|自动控制原理]]  
 [[概率论\|概率论]]
 [[数理统计\|数理统计]]
@@ -67,17 +67,17 @@ root((本网站))
 [[51 单片机\|51 单片机]]（基础部分）
 [[技术经济与工程管理\|技术经济与工程管理]]
 
-
 #### 2 . 即将完善
+[[变换\|变换]]
 [[微积分\|微积分]]
 [[线性代数\|线性代数]]
 [[数字电路\|数字电路]]
 [[物理\|物理]]
 [[STM32\|STM32]]（基础部分）
 
+
 ### 关于网站
-有关网站的其他信息查看[[关于该网站\|关于该网站]]
-如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
+有关网站的其他信息查看[[关于该网站\|关于该网站]]，如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
 
 I'm grateful to **Obsidian** and the open-source plugin **Digital Garden**, which have enabled my knowledge network to be presented to the public.
 
