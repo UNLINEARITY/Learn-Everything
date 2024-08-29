@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-25T19:05:37.886+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-08-29T22:22:50.391+08:00"}
 ---
 
 
@@ -58,6 +58,7 @@ root((本网站))
 >“一切高级数学，归根结底都是**微积分**和**线性代数**的各种变化”
 >——丘成桐
 #### 1. 较为完善
+[[变换\|变换]]
 [[自动控制原理\|自动控制原理]]  
 [[概率论\|概率论]]
 [[数理统计\|数理统计]]
@@ -66,8 +67,8 @@ root((本网站))
 [[51 单片机\|51 单片机]]（基础部分）
 [[技术经济与工程管理\|技术经济与工程管理]]
 
+
 #### 2 . 即将完善
-[[变换\|变换]]
 [[微积分\|微积分]]
 [[线性代数\|线性代数]]
 [[数字电路\|数字电路]]
