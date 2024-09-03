@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"计算机/CPU.md","permalink":"/计算机/CPU/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.732+08:00","updated":"2024-08-04T17:34:14.292+08:00"}
+{"dg-publish":true,"dg-path":"计算机/CPU.md","permalink":"/计算机/CPU/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.732+08:00","updated":"2024-09-03T11:36:42.966+08:00"}
 ---
 
 **Central Processing Unit**    **中央处理单元**
