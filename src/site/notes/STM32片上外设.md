@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32片上外设.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/STM32片上外设/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T07:55:45.554+08:00","updated":"2024-08-15T22:19:41.136+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32片上外设.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/STM32片上外设/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T07:55:45.554+08:00","updated":"2024-09-10T11:50:46.812+08:00"}
 ---
 
 (terminology::**Preipheral**)
@@ -36,7 +36,6 @@ void Preipheral_StructInit(Preipheral_InitTypeDef* Preipheral_InitStruct);
 >[!important] 注意
 >调用初始化函数，将结构体地址传入函数时，就写入到硬件的寄存器中了
 >所以可以直接更改值继续使用，初始化其他外设
-
 
 ```C
 Preipheral_InitTypeDef Preipheral_InitStruct;
