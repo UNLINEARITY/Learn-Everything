@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-09-10T12:12:48.542+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-09-16T13:06:43.928+08:00"}
 ---
 
 (terminology::**STM32 MCU**)
@@ -10,13 +10,9 @@
 核心部分： [[STM32片上外设\|STM32片上外设]]
 
 
-
-
 ### 实际应用
 [[STM32中断系统\|STM32中断系统]]
 [[STM32程序设计\|STM32程序设计]]
-
-
 ***
 ### 参考资料
 1. https://jiangxiekeji.com/
