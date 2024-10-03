@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"变换/z变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-10-01T13:42:32.729+08:00"}
+{"dg-publish":true,"dg-path":"变换/z变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-10-03T22:24:15.667+08:00"}
 ---
 
 
@@ -24,10 +24,9 @@ E(z)=\mathscr{Z}[e^{*}(t)]=\sum\limits_{n=0}^{\infty} e(nT)z^{-n}
 \end{align}$$
 
 ### z 变换方法
-[[级数\|级数]]
 
 #### 1.级数求和法
-根据定义写为展开形式
+根据定义写为[[级数\|级数]]展开形式
 
 $$\begin{align}
 E(z)=e(0)+e(T)z^{-1}+e(2T)z^{-2}+\cdots+e(nT)z^{-n}
@@ -45,17 +44,13 @@ $$\begin{align}
 先求**已知连续函数的拉氏变换**  $E(s)$
 将有理分式 $E(s)$ 展开为**部分分式之和**的形式
 
-
 ### z 变换的性质
-
 #### 1. 线性定理
 z 变换是一种[[线性变换\|线性变换]]，满足齐次性与均匀性
-
 $$\begin{align}
 \mathscr{Z}[ae(t)]&=aE(z) \\
 \mathscr{Z}[e_{1}(t)\pm e_{2}(t)]&=E_{1}(z)\pm E_{2}(z)
 \end{align}$$
-
 
 #### 2. 实数位移定理
 ==**实数位移:**==
