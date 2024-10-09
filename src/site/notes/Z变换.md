@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"变换/z变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-10-03T22:24:15.667+08:00"}
+{"dg-publish":true,"dg-path":"变换/Z变换.md","tags":["Transform","Discrete"],"permalink":"/变换/Z变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.861+08:00","updated":"2024-10-06T22:23:49.787+08:00"}
 ---
 
 
