@@ -1,10 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/V-M系统.md","permalink":"/电机及电力拖动/V-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.855+08:00","updated":"2024-06-16T17:03:32.818+08:00"}
+{"dg-publish":true,"dg-path":"电机及电力拖动/V-M系统.md","permalink":"/电机及电力拖动/V-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-15T17:33:00.613+08:00","updated":"2024-10-15T17:33:00.613+08:00"}
 ---
 
-**Voltage-Motor**
-晶闸管-电动机系统
-静止式可控整流器
+(terminology::**Voltage-Motor System**)
+晶闸管-电动机系统，静止式可控整流器
 ### 基本原理
 ![Pasted image 20240418220745.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/Pasted%20image%2020240418220745.png)
 
