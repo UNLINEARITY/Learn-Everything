@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-09-20T10:12:14.288+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32.md","dg-pinned":true,"tags":["Subject"],"permalink":"/MCU微控制器/STM32/STM32/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.841+08:00","updated":"2024-10-27T15:49:22.762+08:00"}
 ---
 
 (terminology::**STM32 MCU**)
@@ -11,14 +11,8 @@
 实际应用：[[STM32程序设计\|STM32程序设计]]
 
 
-
-
 ***
 ### 参考资料
 1. https://jiangxiekeji.com/
 2. STM32F10xxx Reference manual  
-
-
-
-
 
