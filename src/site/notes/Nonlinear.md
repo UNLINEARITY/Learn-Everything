@@ -1,18 +1,24 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-10-09T18:40:50.207+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-10-28T14:46:08.557+08:00"}
 ---
+
 
 
 ```mermaid
 mindmap
 root((本网站))
-	数学
-		微积分
-		概率论
-		数理统计
-		复变函数
-		变换
-		线性代数
+	数理基础
+		数学
+			微积分
+			概率论
+			数理统计
+			复变函数
+			变换
+			线性代数
+		物理
+			电磁学
+			光学
+			力学
 	自动控制原理
 		经典控制理论
 		    时域分析
@@ -23,10 +29,6 @@ root((本网站))
 			状态空间方程
 			非线性控制
 			最优控制
-	物理
-		电磁学
-		光学
-		力学
 	计算机
 		编程语言
 			MATLAB
