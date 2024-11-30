@@ -110,40 +110,59 @@ In actual work and life, basic mathematics and physics knowledge are often neede
 ***
 
 ## III. Website Content
+
 ```mermaid
 mindmap
-root((Website))
-    Mathematics
-        Calculus
-        Probability Theory
-        Mathematical Statistics
-        Complex Functions
-        Integral Transforms
-    Principles of Automatic Control
-        Classical Control Theory
-        Modern Control Theory
-    Physics
-        Mechanics
-        Electromagnetism
-        Thermodynamics
-        Optics
-        Quantum Mechanics
-    Computer Science
-        Programming Languages
-            MATLAB
-            Python
-            C++
-        Microcontroller
-            8051
-            STM32
-    Electric Drive
-        DC Drive Systems
-        AC Drive Systems
-    Tools
-        Markdown
-        LaTeX
-        Mermaid
+root((本网站))
+	数理基础
+		数学
+			微积分
+			概率论
+			数理统计
+			复变函数
+			变换
+			线性代数
+		物理
+			电磁学
+			光学
+			力学
+	自动控制原理
+		经典控制理论
+		    时域分析
+		    根轨迹法
+		    频域分析
+		    离散控制系统
+		现代控制理论
+			状态空间方程
+			非线性控制
+			最优控制
+	计算机
+		编程语言
+			MATLAB
+			Python
+			C++
+		单片机
+		    8051
+		    STM32
+		数据结构与算法
+			数据结构
+			算法
+		人工智能
+			机器学习
+			大语言模型
+	自动化基础
+		电子技术基础
+			电路分析
+			数字电路
+			模拟电路
+		电机与电力拖动
+			直流拖动系统
+			交流拖动系统
+		过程控制
+			过程检测仪表
+			调节器与执行器
 ```
+
 ### 目前该网站**涵盖**并**持续更新**的内容！！！
 **较为完善的部分：**
 - [x] 自动控制原理——经典控制理论
