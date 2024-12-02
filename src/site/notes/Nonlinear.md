@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-11-30T21:03:15.474+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.767+08:00","updated":"2024-12-01T10:46:53.181+08:00"}
 ---
 
 
@@ -43,6 +43,7 @@ root((本网站))
 		人工智能
 			机器学习
 			大语言模型
+			
 	自动化基础
 		电子技术基础
 			电路分析
@@ -59,6 +60,7 @@ root((本网站))
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周
 >"How can one be self-important when they have seen so little?"--"Autumn Floods," Zhuang Zhou
 
+> 指穷于为薪，火传也，不知其尽也。
 ***
 ### 一、该网站的核心思想 
 本网站的由来其实也不能完全说是一种巧合，更多的是源于一种兴致的上升，
