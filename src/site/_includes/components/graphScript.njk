@@ -1,26 +1,43 @@
 <script>
     async function fetchGraphData() {
         const graphData = await fetch('/graph.json').then(res => res.json());
-        const fullGraphData  = filterFullGraphData(graphData);
-        return {graphData, fullGraphData}
+        const fullGraphData = filterFullGraphData(graphData);
+        return { graphData, fullGraphData };
+    }
+
+    const GROUP_COLOR_MAP = {
+        "/自动控制原理": "#1f77b4",  // 蓝色
+        "/电子技术": "#ff7f0e",      // 橙色
+        "/数学/复变函数": "#2ca02c",  // 绿色
+        "/数学/线性代数": "#d62728", // 红色
+        "default": "#9467bd"        // 默认颜色 (紫色)
+    };
+
+    function getNodeColor(group) {
+        for (const key in GROUP_COLOR_MAP) {
+            if (group.startsWith(key)) {
+                return GROUP_COLOR_MAP[key];
+            }
+        }
+        return GROUP_COLOR_MAP["default"];
     }
 
     function getNextLevelNeighbours(existing, remaining) {
         const keys = Object.values(existing).map((n) => n.neighbors).flat();
         const n_remaining = Object.keys(remaining).reduce((acc, key) => {
-                if (keys.indexOf(key) != -1) {
-                    if (!remaining[key].hide) {
-                        existing[key] = remaining[key];
-                    }
-                } else {
-                    acc[key] = remaining[key];
+            if (keys.indexOf(key) != -1) {
+                if (!remaining[key].hide) {
+                    existing[key] = remaining[key];
                 }
-                return acc;
-            }, {});
+            } else {
+                acc[key] = remaining[key];
+            }
+            return acc;
+        }, {});
         return existing, n_remaining;
     }
 
-     function filterLocalGraphData(graphData, depth) {
+    function filterLocalGraphData(graphData, depth) {
         if (graphData == null) {
             return null;
         }
@@ -49,15 +66,20 @@
             links: links.filter(function (con) {
                 return ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1;
             }),
-        }
+        };
     }
 
-
-    function getCssVar(variable) {return getComputedStyle(document.body).getPropertyValue(variable)}
-
-    function htmlDecode(input) {
-        var doc = new DOMParser().parseFromString(input, "text/html");
-        return doc.documentElement.textContent;
+    function filterFullGraphData(graphData) {
+        if (graphData == null) {
+            return null;
+        }
+        graphData = JSON.parse(JSON.stringify(graphData));
+        const hiddens = Object.values(graphData.nodes).filter((n) => n.hide).map((n) => n.id);
+        const data = {
+            links: JSON.parse(JSON.stringify(graphData.links)).filter((l) => hiddens.indexOf(l.source) == -1 && hiddens.indexOf(l.target) == -1),
+            nodes: [...Object.values(graphData.nodes).filter((n) => !n.hide)]
+        };
+        return data;
     }
 
     function renderGraph(graphData, id, delay, fullScreen) {
@@ -65,14 +87,13 @@
             return;
         }
         const el = document.getElementById(id);
-        width = el.offsetWidth;
-        height = el.offsetHeight;
+        const width = el.offsetWidth;
+        const height = el.offsetHeight;
         const highlightNodes = new Set();
         let hoverNode = null;
-        const color = getCssVar("--graph-main");
         const mutedColor = getCssVar("--graph-muted");
         let Graph = ForceGraph()
-        (el)
+            (el)
             .graphData(graphData)
             .nodeId('id')
             .nodeLabel('title')
@@ -86,45 +107,33 @@
             .autoPauseRedraw(false)
             .linkColor((link) => {
                 if (hoverNode == null) {
-                    return color;
+                    return mutedColor;
                 }
                 if (link.source.id == hoverNode.id || link.target.id == hoverNode.id) {
-                    return color;
+                    return getNodeColor(link.source.group);
                 } else {
                     return mutedColor;
                 }
-                
             })
             .nodeCanvasObject((node, ctx) => {
                 const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
                 const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
-                
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
-                if (hoverNode == null) {
-                    ctx.fillStyle = color;
-                } else {
-                    if (node == hoverNode || highlightNodes.has(node.url)) {
-                        ctx.fillStyle = color;
-                    } else {
-                        ctx.fillStyle = mutedColor;
-                    }
-                }
-                 
+                ctx.fillStyle = hoverNode == null || node === hoverNode || highlightNodes.has(node.url)
+                    ? getNodeColor(node.group)
+                    : mutedColor;
                 ctx.fill();
-                
                 if (node.current) {
                     ctx.beginPath();
                     ctx.arc(node.x, node.y, nodeR + 1, 0, 2 * Math.PI, false);
                     ctx.lineWidth = 0.5;
-                    ctx.strokeStyle = color;
+                    ctx.strokeStyle = getNodeColor(node.group);
                     ctx.stroke();
                 }
-
-                const label = htmlDecode(node.title)
+                const label = htmlDecode(node.title);
                 const fontSize = 3.5;
                 ctx.font = `${fontSize}px Sans-Serif`;
-
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'top';
                 ctx.fillText(label, node.x, node.y + nodeR + 2);
@@ -135,57 +144,44 @@
             .onNodeHover(node => {
                 highlightNodes.clear();
                 if (node) {
-                highlightNodes.add(node);
-                node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
+                    highlightNodes.add(node);
+                    node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
                 }
                 hoverNode = node || null;
-                
             });
-            if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
-                setTimeout(() => {
-                    Graph.zoomToFit(5, 75);
-                }, delay || 200);
-            }
+        if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
+            setTimeout(() => {
+                Graph.zoomToFit(5, 75);
+            }, delay || 200);
+        }
         return Graph;
     }
 
     function renderLocalGraph(graphData, depth, fullScreen) {
-        if (window.graph){
+        if (window.graph) {
             window.graph._destructor();
         }
         const data = filterLocalGraphData(graphData, depth);
         return renderGraph(data, 'link-graph', null, fullScreen);
     }
 
-    function filterFullGraphData(graphData) {
-        if (graphData == null) {
-            return null;
-        }
-        graphData = JSON.parse(JSON.stringify(graphData));
-        const hiddens = Object.values(graphData.nodes).filter((n) => n.hide).map((n) => n.id);
-        const data = {
-            links: JSON.parse(JSON.stringify(graphData.links)).filter((l) => hiddens.indexOf(l.source) == -1 && hiddens.indexOf(l.target) == -1),
-            nodes: [...Object.values(graphData.nodes).filter((n) => !n.hide)]
-        }
-        return data
-    }
-
     function openFullGraph(fullGraphData) {
         lucide.createIcons({
-                attrs: {
-                    class: ["svg-icon"]
-                }
-            });
-        return renderGraph(fullGraphData, "full-graph-container", 200, false);;
+            attrs: {
+                class: ["svg-icon"]
+            }
+        });
+        return renderGraph(fullGraphData, "full-graph-container", 200, false);
     }
 
-    function closefullGraph(fullGraph) {
+    function closeFullGraph(fullGraph) {
         if (fullGraph) {
             fullGraph._destructor();
         }
         return null;
     }
 </script>
+
 <div  x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
     <div class="graph-title-container">
         <div class="graph-title">关系图谱 Graph</div>
