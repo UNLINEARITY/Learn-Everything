@@ -1,31 +1,16 @@
 <script>
     async function fetchGraphData() {
-        const graphData = await fetch('/graph.json').then(res => res.json());
+        const graphData = await fetch('/graph.json').then((res) => res.json());
         const fullGraphData = filterFullGraphData(graphData);
         return { graphData, fullGraphData };
     }
 
-    const GROUP_COLOR_MAP = {
-        "/自动控制原理": "#1f77b4",  // 蓝色
-        "/电子技术": "#ff7f0e",      // 橙色
-        "/数学/复变函数": "#2ca02c",  // 绿色
-        "/数学/线性代数": "#d62728", // 红色
-        "default": "#9467bd"        // 默认颜色 (紫色)
-    };
-
-    function getNodeColor(group) {
-        for (const key in GROUP_COLOR_MAP) {
-            if (group.startsWith(key)) {
-                return GROUP_COLOR_MAP[key];
-            }
-        }
-        return GROUP_COLOR_MAP["default"];
-    }
-
     function getNextLevelNeighbours(existing, remaining) {
-        const keys = Object.values(existing).map((n) => n.neighbors).flat();
+        const keys = Object.values(existing)
+            .map((n) => n.neighbors)
+            .flat();
         const n_remaining = Object.keys(remaining).reduce((acc, key) => {
-            if (keys.indexOf(key) != -1) {
+            if (keys.indexOf(key) !== -1) {
                 if (!remaining[key].hide) {
                     existing[key] = remaining[key];
                 }
@@ -34,7 +19,7 @@
             }
             return acc;
         }, {});
-        return existing, n_remaining;
+        return [existing, n_remaining];
     }
 
     function filterLocalGraphData(graphData, depth) {
@@ -54,32 +39,38 @@
         let existing = {};
         existing[currentNode.url] = currentNode;
         for (let i = 0; i < depth; i++) {
-            existing, remaining = getNextLevelNeighbours(existing, remaining);
+            [existing, remaining] = getNextLevelNeighbours(existing, remaining);
         }
-        nodes = Object.values(existing);
-        if (!currentNode.home) {
-            nodes = nodes.filter(n => !n.home);
-        }
-        let ids = nodes.map((n) => n.id);
+        const nodes = Object.values(existing).filter((n) => !n.home || currentNode.home);
+        const ids = nodes.map((n) => n.id);
         return {
             nodes,
-            links: links.filter(function (con) {
-                return ids.indexOf(con.target) > -1 && ids.indexOf(con.source) > -1;
-            }),
+            links: links.filter((link) => ids.includes(link.target) && ids.includes(link.source)),
         };
     }
 
-    function filterFullGraphData(graphData) {
-        if (graphData == null) {
-            return null;
-        }
-        graphData = JSON.parse(JSON.stringify(graphData));
-        const hiddens = Object.values(graphData.nodes).filter((n) => n.hide).map((n) => n.id);
-        const data = {
-            links: JSON.parse(JSON.stringify(graphData.links)).filter((l) => hiddens.indexOf(l.source) == -1 && hiddens.indexOf(l.target) == -1),
-            nodes: [...Object.values(graphData.nodes).filter((n) => !n.hide)]
+    function getCssVar(variable) {
+        return getComputedStyle(document.body).getPropertyValue(variable);
+    }
+
+    function htmlDecode(input) {
+        const doc = new DOMParser().parseFromString(input, "text/html");
+        return doc.documentElement.textContent;
+    }
+
+    function getNodeColor(node) {
+        const groupColors = {
+            "/自动控制原理": "blue",
+            "/电子技术": "green",
+            "/数学/复变函数": "red",
+            "/数学/线性代数": "purple",
         };
-        return data;
+        for (const [prefix, color] of Object.entries(groupColors)) {
+            if (node.url.startsWith(prefix)) {
+                return color;
+            }
+        }
+        return "gray"; // Default color for unmatched nodes
     }
 
     function renderGraph(graphData, id, delay, fullScreen) {
@@ -91,68 +82,57 @@
         const height = el.offsetHeight;
         const highlightNodes = new Set();
         let hoverNode = null;
+
         const mutedColor = getCssVar("--graph-muted");
-        let Graph = ForceGraph()
-            (el)
+        const Graph = ForceGraph()(el)
             .graphData(graphData)
-            .nodeId('id')
-            .nodeLabel('title')
-            .linkSource('source')
-            .linkTarget('target')
-            .d3AlphaDecay(0.10)
+            .nodeId("id")
+            .nodeLabel("title")
+            .linkSource("source")
+            .linkTarget("target")
             .width(width)
             .height(height)
             .linkDirectionalArrowLength(2)
             .linkDirectionalArrowRelPos(0.5)
             .autoPauseRedraw(false)
-            .linkColor((link) => {
-                if (hoverNode == null) {
-                    return mutedColor;
-                }
-                if (link.source.id == hoverNode.id || link.target.id == hoverNode.id) {
-                    return getNodeColor(link.source.group);
-                } else {
-                    return mutedColor;
-                }
-            })
+            .linkColor((link) =>
+                hoverNode && (link.source.id === hoverNode.id || link.target.id === hoverNode.id)
+                    ? getNodeColor(link.source)
+                    : mutedColor
+            )
             .nodeCanvasObject((node, ctx) => {
                 const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
                 const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
-                ctx.fillStyle = hoverNode == null || node === hoverNode || highlightNodes.has(node.url)
-                    ? getNodeColor(node.group)
-                    : mutedColor;
+                ctx.fillStyle = hoverNode && highlightNodes.has(node) ? getNodeColor(node) : mutedColor;
                 ctx.fill();
                 if (node.current) {
                     ctx.beginPath();
                     ctx.arc(node.x, node.y, nodeR + 1, 0, 2 * Math.PI, false);
                     ctx.lineWidth = 0.5;
-                    ctx.strokeStyle = getNodeColor(node.group);
+                    ctx.strokeStyle = getNodeColor(node);
                     ctx.stroke();
                 }
                 const label = htmlDecode(node.title);
-                const fontSize = 3.5;
-                ctx.font = `${fontSize}px Sans-Serif`;
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'top';
+                ctx.font = "3.5px Sans-Serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "top";
                 ctx.fillText(label, node.x, node.y + nodeR + 2);
             })
-            .onNodeClick(node => {
+            .onNodeClick((node) => {
                 window.location = node.url;
             })
-            .onNodeHover(node => {
+            .onNodeHover((node) => {
                 highlightNodes.clear();
                 if (node) {
                     highlightNodes.add(node);
-                    node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
+                    node.neighbors.forEach((neighbor) => highlightNodes.add(neighbor));
                 }
                 hoverNode = node || null;
             });
-        if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
-            setTimeout(() => {
-                Graph.zoomToFit(5, 75);
-            }, delay || 200);
+        if (fullScreen || (delay && graphData.nodes.length > 4)) {
+            setTimeout(() => Graph.zoomToFit(500, 75), delay || 200);
         }
         return Graph;
     }
@@ -162,50 +142,58 @@
             window.graph._destructor();
         }
         const data = filterLocalGraphData(graphData, depth);
-        return renderGraph(data, 'link-graph', null, fullScreen);
+        return renderGraph(data, "link-graph", null, fullScreen);
+    }
+
+    function filterFullGraphData(graphData) {
+        if (graphData == null) {
+            return null;
+        }
+        const data = {
+            links: graphData.links.filter(
+                (l) => !graphData.nodes[l.source]?.hide && !graphData.nodes[l.target]?.hide
+            ),
+            nodes: Object.values(graphData.nodes).filter((n) => !n.hide),
+        };
+        return data;
     }
 
     function openFullGraph(fullGraphData) {
-        lucide.createIcons({
-            attrs: {
-                class: ["svg-icon"]
-            }
-        });
         return renderGraph(fullGraphData, "full-graph-container", 200, false);
     }
 
-    function closeFullGraph(fullGraph) {
+    function closefullGraph(fullGraph) {
         if (fullGraph) {
             fullGraph._destructor();
         }
         return null;
     }
 </script>
-
-<div  x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null }" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
     <div class="graph-title-container">
         <div class="graph-title">关系图谱 Graph</div>
         <div id="graph-controls">
-                <div class="depth-control">
-                    <label for="graph-depth">联系深度 Depth</label>
-                    <div class="slider">
-                            <input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth"/>
+            <div class="depth-control">
+                <label for="graph-depth">联系深度 Depth</label>
+                <div class="slider">
+                    <input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth" />
                     <datalist id="depthmarkers">
-                            <option value="1" label="1"></option>
-                            <option value="2" label="2"></option>
-                            <option value="3" label="3"></option>
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
                     </datalist>
-                    </div>
-                    <span id="depth-display" x-text="depth"></span>
                 </div>
-                <div class="ctrl-right">
-                    <span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i  icon-name="globe" aria-hidden="true"></i></span>
-                    <span  id="graph-fs-btn"  x-on:click="fullScreen = !fullScreen"><i  icon-name="expand" aria-hidden="true"></i></span>
-                </div>
+                <span id="depth-display" x-text="depth"></span>
+            </div>
+            <div class="ctrl-right">
+                <span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => { fullGraph = openFullGraph(fullGraphData); }, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+                <span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+            </div>
         </div>
     </div>
-    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph" ></div>
+    <div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
     <div x-show="showFullGraph" id="full-graph" class="show" style="display: none;">
-        <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+        <span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span>
+        <div id="full-graph-container"></div>
     </div>
 </div>
