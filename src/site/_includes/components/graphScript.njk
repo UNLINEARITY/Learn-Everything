@@ -1,12 +1,4 @@
 <script>
-    // Define colors for each group
-    const groupColors = {
-        "自动控制原理": "#FF6347",  // Red (Example color for "自动控制原理")
-        "MCU微控制器": "#1E90FF",  // Blue (Example color for "MCU微控制器")
-        "其他": "#32CD32",          // Green (Example color for "其他")
-        "none": "#D3D3D3"           // Default color for nodes without a group
-    };
-
     async function fetchGraphData() {
         const graphData = await fetch('/graph.json').then(res => res.json());
         const fullGraphData  = filterFullGraphData(graphData);
@@ -60,9 +52,7 @@
         }
     }
 
-    function getCssVar(variable) {
-        return getComputedStyle(document.body).getPropertyValue(variable);
-    }
+    function getCssVar(variable) {return getComputedStyle(document.body).getPropertyValue(variable)}
 
     function htmlDecode(input) {
         var doc = new DOMParser().parseFromString(input, "text/html");
@@ -80,6 +70,12 @@
         let hoverNode = null;
         const color = getCssVar("--graph-main");
         const mutedColor = getCssVar("--graph-muted");
+
+        // 添加自定义颜色配置
+        const customNodeColors = {
+            '/自动控制原理/': '#FF6347', // Red color for '自动控制原理'
+            '/MCU微控制器/51 单片机': '#4682B4' // Blue color for '51 单片机'
+        };
 
         let Graph = ForceGraph()
         (el)
@@ -107,24 +103,34 @@
             .nodeCanvasObject((node, ctx) => {
                 const numberOfNeighbours = (node.neighbors && node.neighbors.length) || 2;
                 const nodeR = Math.min(7, Math.max(numberOfNeighbours / 2, 2));
-
-                // Set the color based on the node's group
-                const groupColor = groupColors[node.group] || groupColors["none"];
                 
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, nodeR, 0, 2 * Math.PI, false);
-                ctx.fillStyle = hoverNode == null || node == hoverNode || highlightNodes.has(node.url) ? groupColor : mutedColor;
-                ctx.fill();
+                
+                // 设定不同 URL 对应的颜色
+                let nodeColor = customNodeColors[node.url] || color;
 
+                if (hoverNode == null) {
+                    ctx.fillStyle = nodeColor;
+                } else {
+                    if (node == hoverNode || highlightNodes.has(node.url)) {
+                        ctx.fillStyle = nodeColor;
+                    } else {
+                        ctx.fillStyle = mutedColor;
+                    }
+                }
+                 
+                ctx.fill();
+                
                 if (node.current) {
                     ctx.beginPath();
                     ctx.arc(node.x, node.y, nodeR + 1, 0, 2 * Math.PI, false);
                     ctx.lineWidth = 0.5;
-                    ctx.strokeStyle = groupColor;
+                    ctx.strokeStyle = nodeColor;
                     ctx.stroke();
                 }
 
-                const label = htmlDecode(node.title);
+                const label = htmlDecode(node.title)
                 const fontSize = 3.5;
                 ctx.font = `${fontSize}px Sans-Serif`;
 
@@ -143,12 +149,12 @@
                 }
                 hoverNode = node || null;
             });
-
-        if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
-            setTimeout(() => {
-                Graph.zoomToFit(5, 75);
-            }, delay || 200);
-        }
+            
+            if (fullScreen || (delay != null && graphData.nodes.length > 4)) {
+                setTimeout(() => {
+                    Graph.zoomToFit(5, 75);
+                }, delay || 200);
+            }
         return Graph;
     }
 
@@ -175,10 +181,10 @@
 
     function openFullGraph(fullGraphData) {
         lucide.createIcons({
-            attrs: {
-                class: ["svg-icon"]
-            }
-        });
+                attrs: {
+                    class: ["svg-icon"]
+                }
+            });
         return renderGraph(fullGraphData, "full-graph-container", 200, false);
     }
 
@@ -189,6 +195,7 @@
         return null;
     }
 </script>
+
 
 <div  x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
     <div class="graph-title-container">
