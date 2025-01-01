@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32片上外设.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/STM32片上外设/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T07:55:45.554+08:00","updated":"2024-09-17T00:34:38.770+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32片上外设.md","tags":["Preipheral"],"permalink":"/MCU微控制器/STM32/STM32片上外设/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-22T07:55:45.554+08:00","updated":"2024-12-22T12:42:54.585+08:00"}
 ---
 
 (terminology::**Preipheral**)
@@ -18,6 +18,7 @@
 | [[DMA\|DMA]]            | 直接内存访问        |     | SDIO             | SD卡接口     |
 | [[RTC\|RTC]]       | 实时时钟          |     | FSMC             | 可变静态存储控制器 |
 | CRC                | CRC校验         |     | USB OTG          | USB主机接口   |
+
 
 ### 共同代码
 #### 初始化
@@ -56,10 +57,6 @@ void Preipheral_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
 #### 中断配置
 [[NVIC\|NVIC]]
 
-
-```C
-
-```
 
 ### 说明
 >[!important] 注意
