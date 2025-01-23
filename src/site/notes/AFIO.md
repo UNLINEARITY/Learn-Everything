@@ -23,7 +23,7 @@ GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable , ENABLE); //将默认串口调�
 需要将端口先变为普通端口再进行重映射 
 
 ### 引脚定义图
-![STM32F103C8T6引脚定义.png](/img/user/%E5%8A%9F%E8%83%BD%E6%80%A7%E6%96%87%E4%BB%B6%E5%A4%B9/%E8%BD%BD%E5%85%A5%E7%9A%84%E5%AA%92%E4%BD%93%E8%B5%84%E6%BA%90/STM32F103C8T6%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89.png)
+![STM32F103C8T6引脚定义.png](/img/user/Functional%20files/Photo%20Resources/STM32F103C8T6%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89.png)
 
 ### GPIO. h
 ```C
