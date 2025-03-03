@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-pinned":true,"dg-path":"关于该网站/Unlinearity.md","permalink":"/关于该网站/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2025-03-02T15:45:44.542+08:00"}
+{"dg-publish":true,"dg-pinned":true,"dg-path":"关于该网站/Unlinearity.md","permalink":"/关于该网站/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2025-03-03T13:20:20.412+08:00"}
 ---
 
 
@@ -19,7 +19,6 @@
 而经过一段时间的部署，从 Github Pages 到 Vercel，从文件的基础推送到评论功能的增加、网站域名的解析、mermaid 的渲染...... 我逐渐意识到：以这套工作流构建的网站很多，但似乎像我这样的工作还是很少。
 
 但实际上，目前的局面还是很尴尬的，也许现在的工作还是太过于基础了，体量还是不够大，但是我还是想要以这种方式呈现些什么，给他人带来些什么，可能还是会继续完善下去。
-
 ### Unlinearity？
 本意是想取**非线性**之意，直接在线性 **linearity**加了一个前缀 **Un-**  
 但实际上**非线性：Nonlinearity**  
