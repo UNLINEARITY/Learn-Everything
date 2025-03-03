@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-pinned":true,"dg-path":"关于该网站/Unlinearity.md","permalink":"/关于该网站/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2024-10-29T18:12:29.223+08:00"}
+{"dg-publish":true,"dg-pinned":true,"dg-path":"关于该网站/Unlinearity.md","permalink":"/关于该网站/Unlinearity/","pinned":true,"dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-19T20:22:30.740+08:00","updated":"2025-03-02T15:45:44.542+08:00"}
 ---
 
 
@@ -9,9 +9,8 @@
 ### 个人基本信息
 来自江西·吉安，福建·漳州，出生于 2004-10-02
 联系方式：
-- QQ： 2486759368@qq.com  
-- WeChat ID： unlinearity
-- Github 库：https://github.com/UNLINEARITY/Learn-for-Everything
+- WeChat ID：  unlinearity
+- Github 库： https://github.com/UNLINEARITY/Learn-Everything
 ### 个人的自述
 我高中的时候很喜欢看天上的星星，并觉得我将来应该从事航空航天的事业，探索宇宙的奥秘。由于种种原因，我大学读的是自动化专业，而且大学的层次不算高，远远不及我的高中同学们。
 
@@ -24,11 +23,4 @@
 ### Unlinearity？
 本意是想取**非线性**之意，直接在线性 **linearity**加了一个前缀 **Un-**  
 但实际上**非线性：Nonlinearity**  
-
-
-
-
-
-
-
 
