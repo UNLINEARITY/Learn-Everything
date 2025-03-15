@@ -1,16 +1,14 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","tags":["Graph"],"permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-08T17:09:44.376+08:00","updated":"2025-03-03T12:13:40.917+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/Nyquist图.md","tags":["Graph"],"permalink":"/自动控制原理/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-08T17:09:44.000+08:00","updated":"2025-03-12T12:46:22.000+08:00"}
 ---
 
 
 极坐标图/**幅相曲线图**/Nyquist图
-
 $$\begin{align}
 G(j\omega )&=|G(j\omega )|e^{ j \angle G(j\omega ) }=P(\omega ) +jQ(\omega )
 \end{align}$$
 
 $\omega: 0\to \infty$  $G(j\omega)$ 在复平面上的轨迹,也即 $P(\omega),Q(\omega)$ 变化的曲线
-
 一般只画 $0\to +\infty$ 的部分（$0\to -\infty$ 只需要以实轴为对称轴翻折即可）
 ### 基本的画法
 一般是对开环传递函数绘制
@@ -56,8 +54,7 @@ $P(\omega)=0$ 计算与虚轴交点
 $P(\omega^{-})\quad Q(\omega^{-})\quad |G(\omega^{-})|\quad \angle G(\omega^{-})$
 $P(\omega^{+})\quad Q(\omega^{+})\quad |G(\omega^{+})|\quad \angle G(\omega^{+})$
 
-自然震荡频率的极限问题
-通过对幅值 $\left\lvert  G(j\omega) \right\rvert$ 求导，得到幅值和对应的角频率
+自然震荡频率的极限问题：通过对幅值 $\left\lvert  G(j\omega) \right\rvert$ 求导，得到幅值和对应的角频率
 谐振频率、谐振峰值
 [[经典环节的传递函数\|经典环节的传递函数]]
 ### Nyquist 曲线的增补

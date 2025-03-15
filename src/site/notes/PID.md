@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/PID.md","tags":["Control"],"permalink":"/自动控制原理/PID/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.815+08:00","updated":"2024-10-06T11:26:18.057+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/PID.md","tags":["Control"],"permalink":"/自动控制原理/PID/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-10T10:07:32.000+08:00"}
 ---
 
 PID controller (terminology::**Proportional-Integral-Derivative Controller**)  
@@ -57,12 +57,10 @@ PI控制器相当于增加了一个位于原点的开环极点和一个负实开
 一般不能单独使用 D（按偏差控制，系统不稳定）, I (误差累积)
 - 数学模型已知及大多数数学模型难以确定的控制系统或过程 
 - PID 控制参数整定方便，结构灵活 
-- 数字 PID 控制越来越普及
+- [[数字 PID\|数字 PID]] 控制越来越普及
 $$\begin{align}
 G_{c}(s)&=K_{p}(1+ \dfrac{1}{T_{i}s}+ T_{d}s) \\
 &=\dfrac{K_{p}}{T_{i}} \dfrac{T_{i}T_{d}s^{2}+T_{i}s+1}{s}
 \end{align}$$
-
-
 
 
