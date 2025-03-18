@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"变换/z 变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z 变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-13T11:38:56.000+08:00"}
+{"dg-publish":true,"dg-path":"变换/z 变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z 变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-17T18:04:45.820+08:00"}
 ---
+
 
 (terminology::**Z-Transform**)
 **离散时间信号处理**中的一个重要数学工具，由连续时间信号处理中的[[拉普拉斯变换\|拉普拉斯变换]]引申出来的变换方法
@@ -27,11 +28,6 @@ $$\begin{align}
     \mathscr{Z}(1) & = \sum\limits_{k=0}^{\infty} 1\cdot z^{-n}=  1+ z^{-1}+z^{-2}+\cdots =\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1} \\
 \mathscr{Z}[t] &  =\sum\limits_{k=0}^{\infty} (kT)z^{-k}=   0+Tz^{-1}+2Tz^{-2}+ \cdots =\dfrac{Tz^{-1}}{(1-z^{-1})^{2}}\\
  \mathscr{Z}[e^{-at}] & =\sum\limits_{k=0}^{\infty} e^{ -akT }z^{-k}= 1+e^{ -aT }z^{-1}+ e^{  -2aT}z^{-2}+\cdots =  \dfrac{1}{1-e^{ -aT }z^{-1}}
-\end{align}$$
-
-
-$$\begin{align}
-
 \end{align}$$
 
 
