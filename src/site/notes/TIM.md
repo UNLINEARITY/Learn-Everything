@@ -1,11 +1,10 @@
 ---
-{"dg-publish":true,"dg-path":"MCU微控制器/STM32/TIM.md","permalink":"/MCU微控制器/STM32/TIM/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-16T18:09:07.591+08:00","updated":"2024-09-18T17:15:53.969+08:00"}
+{"dg-publish":true,"dg-path":"MCU微控制器/STM32/TIM.md","permalink":"/MCU微控制器/STM32/TIM/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-16T18:09:07.591+08:00","updated":"2025-03-19T10:14:10.519+08:00"}
 ---
 
 **Timer**    定时器 [[STM32片上外设\|STM32片上外设]]
 
-定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发[[STM32中断系统\|中断]]
-
+定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发中断
 不仅具备基本的[[TIM 定时中断\|定时中断]]功能，而且还包含内外时钟源选择、[[TIM 输入捕获\|输入捕获]]、[[TIM 输出比较\|输出比较]]、主从触发模式、[[TIM 编码器接口\|编码器接口]]等多种功能
 
 根据复杂度和应用场景分为了高级定时器、通用定时器、基本定时器三种类型
