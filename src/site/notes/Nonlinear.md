@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-18T17:15:12.000+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-20T12:14:03.000+08:00"}
 ---
 
 
@@ -81,8 +81,6 @@ root((本网站))
 | **自动化相关**                                | [[自动控制原理\|自动控制原理]]<br><br>[[电机及电力拖动\|电机及电力拖动]]<br><br>[[51 单片机\|51 单片机]]<br><br>[[调节器与执行器\|调节器与执行器]]<br><br>[[检测仪表\|检测仪表]]<br><br>[[PLC\|PLC]] | [[数字电路\|数字电路]]<br><br>[[STM32\|STM32]]<br><br>            |
 | **计算机相关**                                | <br>                                                                                              | [[计算机网络\|计算机网络]]<br><br>[[数据结构与算法\|数据结构与算法]]<br><br>[[机器学习\|机器学习]] |
 | **其他领域**                                 | [[技术经济与工程管理\|技术经济与工程管理]]                                                                                     |                                              |
-| **教程相关**                                 |                                                                                                   |                                              |
-
 
 
 ***
