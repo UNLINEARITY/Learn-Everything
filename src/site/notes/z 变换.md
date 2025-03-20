@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"变换/z 变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z 变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-17T18:04:45.820+08:00"}
+{"dg-publish":true,"dg-path":"变换/z 变换.md","tags":["Transform","Discrete"],"permalink":"/变换/z 变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-20T12:33:39.000+08:00"}
 ---
 
 
@@ -91,6 +91,9 @@ f(0)= \lim\limits_{ n \to 0 } e(nT)= \lim\limits_{ z \to \infty } E(z)
 $$\begin{align}
 f(\infty)=\lim\limits_{ n \to \infty } e(nT)=\lim\limits_{ z \to 1 } (z-1)E(z)
 \end{align}$$
+
+> **注意终值定理的使用条件： 如果不稳定，不能直接使用**
+ 
 
 
 #### 5. 卷积定理
