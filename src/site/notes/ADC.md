@@ -1,5 +1,5 @@
 ---
-{"aliases":["模数转换器","模数转换"],"dg-publish":true,"dg-path":"电子技术/数字电路/ADC.md","tags":["Circuit","Transform"],"permalink":"/电子技术/数字电路/ADC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-04T18:47:42.710+08:00","updated":"2024-11-26T23:16:26.535+08:00"}
+{"aliases":["模数转换器","模数转换"],"dg-publish":true,"dg-path":"电子技术/数字电路/ADC.md","tags":["Circuit","Transform"],"permalink":"/电子技术/数字电路/ADC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-04T18:47:42.710+08:00","updated":"2025-03-25T13:34:58.702+08:00"}
 ---
 
 (terminology::**Analog-to-Digital Conversion**)  模数转换
@@ -33,11 +33,9 @@ $D$ 为数字输出信号，$u_{x}$ 为模拟输入信号，$u_{R}$ 为量化单
 #### 1. 双积分型
 - 采样积分
 - 比较阶段
-
 抗干扰能力较强，测量速度较慢
 
 #### 2. 并行比较型
-
 
 #### 3. 逐次比较型
 基本思想：[[二分法\|二分法]]
