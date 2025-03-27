@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-20T12:14:03.000+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-03-24T10:51:53.000+08:00"}
 ---
 
-
+ 
 ```mermaid
 mindmap
 root((本网站))
@@ -86,6 +86,7 @@ root((本网站))
 ***
 ### 关于网站
 有关网站的相关信息查看[[关于该网站\|关于该网站]]，如果其中的内容对你有帮助，你可以为本网站[开源的项目](https://github.com/UNLINEARITY/Learn-for-Everything) 点一颗⭐star
+
 [![Stars|200](https://img.shields.io/github/stars/UNLINEARITY/Learn-Everything.svg)](https://github.com/UNLINEARITY/Learn-Everything/stargazers)
 
 I'm grateful to **Obsidian** and the open-source plugin **Digital Garden**, which have enabled my knowledge network to be presented to the public.

@@ -1,11 +1,10 @@
 ---
-{"tags":["Preipheral"],"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32 ADC.md","permalink":"/MCU微控制器/STM32/STM32 ADC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-30T16:17:38.715+08:00","updated":"2025-03-19T10:14:54.486+08:00"}
+{"tags":["Preipheral"],"dg-publish":true,"dg-path":"MCU微控制器/STM32/STM32 ADC.md","permalink":"/MCU微控制器/STM32/STM32 ADC/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-07-30T16:17:38.715+08:00","updated":"2025-03-25T13:38:17.196+08:00"}
 ---
 
 
 
-STM32 内置的ADC [[STM32片上外设\|外设资源]]：
-**逐次逼近型**[[ADC#逐次比较型\|ADC]]
+STM32 内置的ADC [[STM32片上外设\|外设资源]]： **逐次逼近型**[[ADC#逐次比较型\|ADC]]
 **性能指标：**
 - 分辨率：12 位，对应转换结果范围：0~4095  $2^{16}$
 - 转换时间：1us 
