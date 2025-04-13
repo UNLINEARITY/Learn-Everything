@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"数学/数理统计/F分布.md","permalink":"/数学/数理统计/F分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-31T14:17:01.708+08:00","updated":"2024-07-31T20:55:39.657+08:00"}
+dg-publish: true
+dg-path: 数学/6. 数理统计/F分布.md
 ---
-
 $F\sim F(n_{1},n_{2})$
 **F-distribution**
 Fisher-Snedecor distribution
