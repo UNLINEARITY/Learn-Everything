@@ -1,19 +1,16 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/Bode图.md","permalink":"/自动控制原理/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2025-03-17T18:04:00.725+08:00"}
+{"dg-publish":true,"dg-path":"自动控制原理/经典控制理论/Bode图.md","permalink":"/自动控制原理/经典控制理论/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2025-04-13T15:22:24.384+08:00"}
 ---
 
 #Graph 
 
 ***对数频率特性图：***
-- **横坐标：**
-	频率的[[对数分度\|对数分度]]   $\lg \omega$    $rad / s$
-	
+- **横坐标**：频率的[[对数分度\|对数分度]]   $\lg \omega$    $rad / s$
 - **纵坐标：**
 	- 幅频特性：$L(\omega)=20\lg |G(j\omega)|$    单位： [[分贝\|dB]]
 	- 相频特性：$\phi(\omega)=\angle G(j\omega)$           单位：$度^{\circ}$
 
 ### 基本画法
-
 **线性叠加**
 
 $$\begin{align}
