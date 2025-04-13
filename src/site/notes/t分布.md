@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-dg-path: 数学/4. 概率论/t分布.md
+dg-path: 数学/5. 概率论/t分布.md
 ---
 (terminology::**Student's t-distribution**)  $T\sim t(n)$
 >小样本的分布
