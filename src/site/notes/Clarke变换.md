@@ -1,5 +1,5 @@
 ---
-{"tags":["Transform"],"dg-publish":true,"dg-path":"A1- 变换/Clarke变换.md","permalink":"/A1- 变换/Clarke变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-09-18T14:30:36.078+08:00","updated":"2025-04-14T17:49:27.446+08:00"}
+{"tags":["Transform"],"dg-publish":true,"dg-path":"A1- 数学/8. 变换/Clarke变换.md","permalink":"/A1- 数学/8. 变换/Clarke变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-09-18T14:30:36.078+08:00","updated":"2025-04-14T18:36:05.400+08:00"}
 ---
 
 
