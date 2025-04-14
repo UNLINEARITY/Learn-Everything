@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"数学/5. 概率论/t分布.md","permalink":"/数学/5. 概率论/t分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-15T17:01:07.717+08:00","updated":"2025-04-14T11:45:15.386+08:00"}
+{"dg-publish":true,"dg-path":"A1- 数学/5. 概率论/t分布.md","permalink":"/A1- 数学/5. 概率论/t分布/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-15T17:01:07.717+08:00","updated":"2025-04-14T18:25:19.708+08:00"}
 ---
 
 (terminology::**Student's t-distribution**)  $T\sim t(n)$
