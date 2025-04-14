@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/PID.md","tags":["Control"],"permalink":"/自动控制原理/PID/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-03T11:43:28.000+08:00"}
+{"dg-publish":true,"dg-path":"A-自动控制原理/PID.md","tags":["Control"],"permalink":"/A-自动控制原理/PID/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-14T11:46:22.578+08:00"}
 ---
 
 PID controller (terminology::**Proportional-Integral-Derivative Controller**)  
