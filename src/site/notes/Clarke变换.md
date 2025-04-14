@@ -1,5 +1,5 @@
 ---
-{"tags":["Transform"],"dg-publish":true,"dg-path":"变换/Clarke变换.md","permalink":"/变换/Clarke变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-09-18T14:30:36.078+08:00","updated":"2024-10-20T16:44:37.178+08:00"}
+{"tags":["Transform"],"dg-publish":true,"dg-path":"A1- 变换/Clarke变换.md","permalink":"/A1- 变换/Clarke变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-09-18T14:30:36.078+08:00","updated":"2025-04-14T17:49:27.446+08:00"}
 ---
 
 

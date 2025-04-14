@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-12T22:11:14.383+08:00"}
+{"dg-publish":true,"dg-home":true,"dg-pinned":true,"permalink":"/Nonlinear/","pinned":true,"tags":["gardenEntry"],"dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-14T18:15:56.159+08:00"}
 ---
 
 
@@ -14,46 +14,43 @@ root((本网站))
 			复变函数
 			变换
 			线性代数
-		物理
-			电磁学
-			光学
-			力学
-	自动控制原理
-		经典控制理论
-		    时域分析
-		    根轨迹法
-		    频域分析
-		    离散控制系统
-		现代控制理论
-			状态空间方程
+	自动控制
+		经典控制
+			时域分析
+			根轨迹法
+			频域分析
+			离散系统
+		现代控制
+			状态空间
 			非线性控制
 			最优控制
 	计算机
-		编程语言
-			MATLAB
-			Python
-			C++
-		单片机
-		    8051
-		    STM32
-		数据结构与算法
-			数据结构
-			算法
 		人工智能
 			机器学习
-			大语言模型
-			
-	自动化基础
-		电子技术基础
+			机器人
+		Linux
+		微控制器
+		    8051
+		    STM32
+		    ESP32
+		编程与算法
+			数据结构
+			算法
+			C++
+			Python
+	自动化
+		电子技术
 			电路分析
 			数字电路
 			模拟电路
-		电机与电力拖动
+		电力拖动
 			直流拖动系统
 			交流拖动系统
 		过程控制
 			过程检测仪表
 			调节器与执行器
+			过程控制系统
+			计算机控制系统
 ```
 
 >“方存乎见少，又奚以自多！”——《[[秋水\|秋水]]》· 庄周

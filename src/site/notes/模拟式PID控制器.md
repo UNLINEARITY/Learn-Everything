@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"dg-path":"过程控制系统/调节器与执行器/模拟式PID控制器.md","permalink":"/过程控制系统/调节器与执行器/模拟式PID控制器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-06T11:27:23.000+08:00","updated":"2025-03-27T11:51:07.000+08:00"}
+{"dg-publish":true,"dg-path":"过程控制系统/调节器与执行器/模拟式PID控制器.md","permalink":"/过程控制系统/调节器与执行器/模拟式PID控制器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-06T11:27:23.000+08:00","updated":"2025-04-14T10:02:27.000+08:00"}
 ---
 
 
 [[PID\|PID]] 
 ### 基本概述
 **偏差 = 测量值 - 给定值**     $\varepsilon=x_{i}-x_{S}$  ，$\varepsilon>0$ 为正偏差，$\varepsilon<0$ 为负偏差
-**输出信号变化量**    $\Delta y$ ，$\varepsilon>0\to \Delta y>0$ 为正作用控制器，$\varepsilon<0\to \Delta y>0$ 为负作用控制器
+**输出信号变化量**    $\Delta y$ ，$\varepsilon>0\to \Delta y>0$ 为正作用控制器，$\varepsilon<0\to \Delta y>0$ 为反作用控制器
 
 $$\begin{align}
 W(s)=K_{p}(1+ \dfrac{1}{T_{i}s}+ T_{d}s)

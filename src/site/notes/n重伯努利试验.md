@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"数学/5. 概率论/n重伯努利试验.md","permalink":"/数学/5. 概率论/n重伯努利试验/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.000+08:00","updated":"2025-04-14T11:45:14.959+08:00"}
+{"dg-publish":true,"dg-path":"A1- 数学/5. 概率论/n重伯努利试验.md","permalink":"/A1- 数学/5. 概率论/n重伯努利试验/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-16T13:01:27.000+08:00","updated":"2025-04-14T18:25:19.711+08:00"}
 ---
 
 
