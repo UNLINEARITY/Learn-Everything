@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/经典控制理论/Bode图.md","permalink":"/自动控制原理/经典控制理论/Bode图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.724+08:00","updated":"2025-04-13T15:22:24.384+08:00"}
+dg-publish: true
+dg-path: A-自动控制原理/1. 经典控制理论/Bode图.md
 ---
-
 #Graph 
 
 ***对数频率特性图：***

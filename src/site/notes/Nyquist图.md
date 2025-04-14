@@ -1,7 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/经典控制理论/Nyquist图.md","tags":["Graph"],"permalink":"/自动控制原理/经典控制理论/Nyquist图/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-08T17:09:44.000+08:00","updated":"2025-04-13T15:22:08.421+08:00"}
+dg-publish: true
+dg-path: A-自动控制原理/1. 经典控制理论/Nyquist图.md
+tags:
+  - Graph
 ---
-
 
 极坐标图/**幅相曲线图**/Nyquist图
 $$\begin{align}

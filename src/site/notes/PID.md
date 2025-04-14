@@ -1,7 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"自动控制原理/PID.md","tags":["Control"],"permalink":"/自动控制原理/PID/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-03T11:43:28.000+08:00"}
+dg-publish: true
+dg-path: A-自动控制原理/PID.md
+tags:
+  - Control
 ---
-
 PID controller (terminology::**Proportional-Integral-Derivative Controller**)  
 对误差信号 $e(t)$ 进行比例、积分和微分运算变换后形成的控制规律
 
