@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/G-M系统.md","permalink":"/电机及电力拖动/G-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2024-06-16T16:28:56.858+08:00"}
+{"dg-publish":true,"dg-path":"A3- 电机及电力拖动/G-M系统.md","permalink":"/A3- 电机及电力拖动/G-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.754+08:00","updated":"2025-04-14T18:38:58.871+08:00"}
 ---
 
 **Generator-Motor**

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"过程控制系统/调节器与执行器/模拟式PID控制器.md","permalink":"/过程控制系统/调节器与执行器/模拟式PID控制器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-06T11:27:23.000+08:00","updated":"2025-04-14T10:02:27.000+08:00"}
+{"dg-publish":true,"dg-path":"A4- 过程控制系统/调节器与执行器/模拟式PID控制器.md","permalink":"/A4- 过程控制系统/调节器与执行器/模拟式PID控制器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-10-06T11:27:23.000+08:00","updated":"2025-04-14T18:40:09.540+08:00"}
 ---
 
 

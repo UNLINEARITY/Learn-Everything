@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/PWM调速系统.md","permalink":"/电机及电力拖动/PWM调速系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-17T23:29:32.412+08:00","updated":"2024-06-16T21:47:22.088+08:00"}
+{"dg-publish":true,"dg-path":"A3- 电机及电力拖动/PWM调速系统.md","permalink":"/A3- 电机及电力拖动/PWM调速系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-04-17T23:29:32.412+08:00","updated":"2025-04-14T18:38:58.854+08:00"}
 ---
 
 脉宽调制变换器-直流电动机调速系统

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/PWM变换器.md","permalink":"/电机及电力拖动/PWM变换器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.821+08:00","updated":"2024-06-18T01:15:38.952+08:00"}
+{"dg-publish":true,"dg-path":"A3- 电机及电力拖动/PWM变换器.md","permalink":"/A3- 电机及电力拖动/PWM变换器/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.821+08:00","updated":"2025-04-14T18:38:58.853+08:00"}
 ---
 
 [[PWM调速系统\|PWM调速系统]]

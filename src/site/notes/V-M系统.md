@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"电机及电力拖动/V-M系统.md","permalink":"/电机及电力拖动/V-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:34:29.536+08:00","updated":"2024-10-22T16:59:19.570+08:00"}
+{"dg-publish":true,"dg-path":"A3- 电机及电力拖动/V-M系统.md","permalink":"/A3- 电机及电力拖动/V-M系统/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:34:29.536+08:00","updated":"2025-04-14T18:38:58.948+08:00"}
 ---
 
 (terminology::**Voltage-Motor System**)
