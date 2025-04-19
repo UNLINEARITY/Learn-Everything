@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"A1- 数学/8. 变换/z 变换.md","tags":["Transform","Discrete"],"permalink":"/A1- 数学/8. 变换/z 变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-14T18:36:05.421+08:00"}
+{"dg-publish":true,"dg-path":"A1- 数学/8. 变换/z 变换.md","tags":["Transform","Discrete"],"permalink":"/A1- 数学/8. 变换/z 变换/","dgPassFrontmatter":true,"noteIcon":"","created":"2024-05-21T15:20:27.000+08:00","updated":"2025-04-17T23:32:55.093+08:00"}
 ---
 
 
@@ -23,7 +23,6 @@ E(z)=\mathscr{Z}[e(t)] =\mathscr{Z}[e^{*}(t)]=\sum\limits_{k=0}^{\infty} e(nT){\
 $\mathscr{Z}$ 表示取 z 变换，习惯上称 $E(z)$ 是采样信号的 z 变换。
 
 
-
 $$\begin{align}
 \large \delta(t-kT)\quad  {\color{red}\Leftrightarrow} \quad e^{ -kTs } \quad{\color{red}\Leftrightarrow} \quad  z^{-k}
 \end{align}$$
@@ -36,32 +35,36 @@ E(z)=  \sum\limits_{k=0}^{\infty} e(kT)z^{-k} =e(0)+e(T)z^{-1}+e(2T)z^{-2}+\cdot
 \end{align}$$
 以上级数[[收敛\|收敛]]的充分条件是满足绝对可和条件：
 $$\begin{align}
-\sum\limits_{k=0}^{+\infty} \left\lvert  f(kT)z^{-k} \right\rvert<+\infty
+\sum\limits_{k=0}^{+\infty} \left\lvert  e(kT)z^{-k} \right\rvert<+\infty
 \end{align}$$
 
 #### 2. 部分分式法
-先求**已知连续函数的拉氏变换**  $E(s)$ ，将有理分式 $E(s)$ 展开为**部分分式之和**的形式，对每个部分分式进行 z 变换。（展开为部分分式重要的是用[[留数\|留数]]来求系数 $c_{i}$）
+先求**已知连续函数的拉氏变换**  $E(s)$ ，将有理分式 $E(s)$ 展开为**部分分式之和**的形式，对每个部分分式进行 z 变换。（展开为部分分式重要的是用[[留数#2. 极点（主要）\|留数法]]来求系数 $c_{i}$）
 $$\begin{align}
-F(s)= \sum\limits_{i=1}^{n} \dfrac{c_{i}}{s-p_{i}}\quad \Rightarrow \quad F(z)=\sum\limits_{i=1}^{n} \dfrac{c_{i}}{1-e^{ p_{i}T }z^{-1}}
+E(s)= \sum\limits_{i=1}^{n} \dfrac{c_{i}}{s-p_{i}}\quad \Rightarrow \quad E(z)=\sum\limits_{i=1}^{n} \dfrac{c_{i}}{1-e^{ p_{i}T }z^{-1}}
 \end{align}$$
+m 重极点的系数：
+$$\begin{align}
+c_{i}= \dfrac{1}{(m-1)!} \lim\limits_{ z \to z_{0} } \dfrac{\mathrm{d}^{m-1} }{\mathrm{d} z^{m-1}} \left[(z-z_{0})^{m}e(z)\right] 
+\end{align}$$
+,,### 三、常见函数的 z 变换
 
-### 三、常见函数的 z 变换
-
-|      |      时间函数      |       离散信号       |        拉普拉斯变换         |           z 变换           |
-| :--: | :------------: | :--------------: | :-------------------: | :----------------------: |
-|  延迟  | $\delta(t-nT)$ | $\delta (kT-nT)$ |     $e^{ -nTs }$      |         $z^{-n}$         |
-| 单位脉冲 |  $\delta(t)$   |   $\delta(kT)$   |          $1$          |           $1$            |
-| 单位阶跃 |     $1(t)$     |     $1(kT)$      |    $\dfrac{1}{s}$     |     $\dfrac{z}{z-1}$     |
-| 单位时间 |      $t$       |       $kT$       |  $\dfrac{1}{s^{2}}$   | $\dfrac{Tz}{(z-1)^{2}}$  |
-|  指数  |  $e^{ -at }$   |   $e^{ -akT }$   |   $\dfrac{1}{s+a}$    | $\dfrac{z}{z-e^{ -aT }}$ |
-|  常数  |   $b^{t/T}$    |     $b^{k}$      | $\dfrac{T}{Ts-\ln b}$ |     $\dfrac{z}{z-b}$     |
+|           |        时间函数         |           离散信号           |        拉普拉斯变换         |                         z 变换                          |
+| :-------: | :-----------------: | :----------------------: | :-------------------: | :---------------------------------------------------: |
+|  **延迟**   |   $\delta(t-nT)$    |     $\delta (kT-nT)$     |     $e^{ -nTs }$      |                       $z^{-n}$                        |
+|   单位脉冲    |     $\delta(t)$     |       $\delta(kT)$       |          $1$          |                          $1$                          |
+|   单位阶跃    |       $1(t)$        |         $1(kT)$          |    $\dfrac{1}{s}$     |         $\dfrac{1}{1-z^{-1}}=\dfrac{z}{z-1}$          |
+|   单位时间    |         $t$         |           $kT$           |  $\dfrac{1}{s^{2}}$   |  $\dfrac{Tz^{-1}}{(1-z^{-1})}=\dfrac{Tz}{(z-1)^{2}}$  |
+| ~~单位加速度~~ | $\dfrac{1}{2}t^{2}$ | $\dfrac{1}{2}k^{2}T^{2}$ |  $\dfrac{1}{s^{3}}$   |   $\dfrac{T^{2}z^{-1}(1+z^{-1})}{2(1-z^{-1})^{3}}$    |
+|    指数     |     $e^{ -at }$     |       $e^{ -akT }$       |   $\dfrac{1}{s+a}$    | $\dfrac{1}{1-e^{ -aT }z^{-1}}=\dfrac{z}{z-e^{ -aT }}$ |
+|    常数     |      $b^{t/T}$      |         $b^{k}$          | $\dfrac{T}{Ts-\ln b}$ |         $\dfrac{1}{1-bz^{-1}}=\dfrac{z}{z-b}$         |
 
 $$\begin{align}
 \mathscr{Z}[\delta(t)] & =\sum\limits_{k=0}^{\infty} \delta(kT)z^{-k}=1 \\
-\mathscr{Z}(1) & = \sum\limits_{k=0}^{\infty} 1\cdot z^{-n}=  1+ z^{-1}+z^{-2}+\cdots =\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1} \\
+\mathscr{Z}(1) & = \sum\limits_{k=0}^{\infty} 1\cdot z^{-n}=  1+ z^{-1}+z^{-2}+\cdots =\dfrac{1}{1-z^{-1}} = \dfrac{z}{z-1} \;\quad \quad \quad \quad (q=z^{-1})\\
 \mathscr{Z}[t] &  =\sum\limits_{k=0}^{\infty} (kT)z^{-k}=   0+Tz^{-1}+2Tz^{-2}+ \cdots =\dfrac{Tz^{-1}}{(1-z^{-1})^{2}}\\
- \mathscr{Z}[e^{-at}] & =\sum\limits_{k=0}^{\infty} e^{ -akT }z^{-k}= 1+e^{ -aT }z^{-1}+ e^{  -2aT}z^{-2}+\cdots =  \dfrac{1}{1-e^{ -aT }z^{-1}} \\
-\mathscr{Z}[b^{t/T}] & =\sum\limits_{k=0}^{\infty} b^{k}z^{-k}=1 + bz^{-1}+b^{2}z^{-2}+\cdots = \dfrac{1}{1-bz^{-1}}
+ \mathscr{Z}[e^{-at}] & =\sum\limits_{k=0}^{\infty} e^{ -akT }z^{-k}= 1+e^{ -aT }z^{-1}+ e^{  -2aT}z^{-2}+\cdots =  \dfrac{1}{1-e^{ -aT }z^{-1}} \quad( q=e^{ -aT }z^{-1})\\
+\mathscr{Z}[b^{t/T}] & =\sum\limits_{k=0}^{\infty} b^{k}z^{-k}=1 + bz^{-1}+b^{2}z^{-2}+\cdots = \dfrac{1}{1-bz^{-1}}\quad \quad\quad \quad \quad \quad  \quad( q=bz^{-1})
 \end{align}$$
 
 > [!important] 
@@ -105,21 +108,27 @@ $$\begin{align}
 \mathscr{Z}[e^{ \mp at }e(t)]=E(ze^{ \pm aT })
 \end{align}$$
 
-
 #### 4. 极限定理
-初值定理：
+**初值定理**：
 $$\begin{align}
 f(0)= \lim\limits_{ n \to 0 } e(nT)= \lim\limits_{ z \to \infty } E(z) 
 \end{align}$$
 
-终值定理：
+**终值定理**：
 $$\begin{align}
 f(\infty)=\lim\limits_{ n \to \infty } e(nT)=\lim\limits_{ z \to 1 } (z-1)E(z)
 \end{align}$$
 
-> **注意终值定理的使用条件： 如果不稳定，不能直接使用**
- 
-#### 5. 卷积定理
+> [!important] 
+> **注意终值定理的使用条件： 如果不稳定，不能直接使用**！！！
+
+
+#### 5. 微分定理
+$$\begin{align}
+\mathscr{Z}[tf(t)]=-zT  \dfrac{\mathrm{d} F(z)}{\mathrm{d} z} 
+\end{align}$$
+
+#### 6. 卷积定理
 [[卷积\|卷积]]
 $$\begin{align}
 x(nT)*y(nT)=\sum\limits_{k=0}^{\infty}x(kT)y\left[(n-k)T\right]
